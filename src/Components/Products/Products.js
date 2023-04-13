@@ -29,7 +29,6 @@ const thumbStyle = {
   cursor: "pointer",
   width: "4px",
   height: "5px",
-  mt: 8,
 };
 function Products() {
   const [value, setValue] = React.useState([10, 37]);
@@ -47,7 +46,7 @@ function Products() {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={3}>
           <Scrollbars
-            style={{ width: 300, height: 500, mt: 3 }}
+            style={{ width: 300, height: 500, }}
             autoHide={true}
             renderThumbVertical={({ style, ...props }) => (
               <div {...props} style={{ ...style, ...thumbStyle }} />
