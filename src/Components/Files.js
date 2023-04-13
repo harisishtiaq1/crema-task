@@ -1,12 +1,6 @@
-import React, { useState } from "react";
-import {
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-  Popover,
-} from "@mui/material";
-import { MoreVert as MoreVertIcon } from "@mui/icons-material";
+import React, { useState } from 'react';
+import { IconButton, MenuItem, Menu, ListItemIcon, ListItemText, Typography } from '@mui/material';
+import { MoreVert as MoreVertIcon, Add as AddIcon, Edit as EditIcon, Delete as DeleteIcon } from '@mui/icons-material';
 
 const MyComponent = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -19,40 +13,38 @@ const MyComponent = () => {
     setAnchorEl(null);
   };
 
-  const open = Boolean(anchorEl);
-  const id = open ? "list-popover" : undefined;
-
   return (
     <>
       <IconButton onClick={handleClick}>
         <MoreVertIcon />
+        <Typography>
+            Haris
+        </Typography>
       </IconButton>
-      <Popover
-        id={id}
-        open={open}
+      <Menu
         anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
         onClose={handleClose}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "right",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "right",
-        }}
       >
-        <List style={{ width: 200, padding: 0 }}>
-          <ListItem style={{ padding: 8 }}>
-            <ListItemText primary="Item 1" />
-          </ListItem>
-          <ListItem style={{ padding: 8 }}>
-            <ListItemText primary="Item 2" />
-          </ListItem>
-          <ListItem style={{ padding: 8 }}>
-            <ListItemText primary="Item 3" />
-          </ListItem>
-        </List>
-      </Popover>
+        <MenuItem onClick={handleClose}>
+          <ListItemIcon>
+            <AddIcon />
+          </ListItemIcon>
+          <ListItemText primary="Add" />
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <ListItemIcon>
+            <EditIcon />
+          </ListItemIcon>
+          <ListItemText primary="Edit" />
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <ListItemIcon>
+            <DeleteIcon />
+          </ListItemIcon>
+          <ListItemText primary="Delete" />
+        </MenuItem>
+      </Menu>
     </>
   );
 };
