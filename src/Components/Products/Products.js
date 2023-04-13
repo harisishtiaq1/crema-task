@@ -7,6 +7,7 @@ import {
   Grid,
   Paper,
   Slider,
+  Stack,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -37,26 +38,25 @@ function Products() {
     setValue(newValue);
   };
   return (
-    <Scrollbars
-      style={{ width: 330, height: 490 }}
-      autoHide={true}
-      renderThumbVertical={({ style, ...props }) => (
-        <div {...props} style={{ ...style, ...thumbStyle }} />
-      )}
-    >
-      <Box sx={{ mt: 10, ml: 3 }}>
-        <Typography
-          position="static"
-          sx={{ mt: 4, fontWeight: "bold", fontSize: "17px" }}
-        >
+    <Box sx={{ mt: 10, ml: 3 }}>
+      <Box position="static" sx={{ mt: 4 }}>
+        <Typography sx={{ mt: 4, fontWeight: "bold", fontSize: "17px" }}>
           Products
         </Typography>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={3}>
+      </Box>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={3}>
+          <Scrollbars
+            style={{ width: 300, height: 500, mt: 3 }}
+            autoHide={true}
+            renderThumbVertical={({ style, ...props }) => (
+              <div {...props} style={{ ...style, ...thumbStyle }} />
+            )}
+          >
             <Paper
               sx={{
+                mt: 4,
                 width: 270,
-                mt: 3,
                 padding: "15px",
                 borderRadius: "10px",
                 fontFamily: " Poppins, sans-serif",
@@ -181,11 +181,63 @@ function Products() {
                 <FormControlLabel control={<Checkbox />} label="10% or more" />
               </FormGroup>
               <Divider variant="middle" sx={{ mt: 2 }} />
+              <Typography
+                sx={{
+                  color: "grey",
+                  fontSize: "15px",
+                  ml: 3,
+                  mt: 3,
+                }}
+              >
+                COLOR
+              </Typography>
+              <Stack direction="row" spacing={1} sx={{ ml: 2, mt: 2 }}>
+                <Box
+                  sx={{
+                    backgroundColor: "rgb(10, 143, 220)",
+                    borderRadius: "400px",
+                    height: "40px",
+                    width: "40px",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    backgroundColor: "rgb(135, 129, 189)",
+                    borderRadius: "400px",
+                    height: "40px",
+                    width: "40px",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    backgroundColor: "rgb(163, 211, 156)",
+                    borderRadius: "400px",
+                    height: "40px",
+                    width: "40px",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    backgroundColor: "rgb(245, 152, 157)",
+                    borderRadius: "400px",
+                    height: "40px",
+                    width: "40px",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    backgroundColor: "rgb(246, 150, 121)",
+                    borderRadius: "400px",
+                    height: "40px",
+                    width: "40px",
+                  }}
+                ></Box>
+              </Stack>
             </Paper>
-          </Grid>
+          </Scrollbars>
         </Grid>
-      </Box>
-    </Scrollbars>
+      </Grid>
+    </Box>
   );
 }
 
