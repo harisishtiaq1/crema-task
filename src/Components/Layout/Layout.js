@@ -1,8 +1,8 @@
-import { Typography } from "@mui/material";
 import React from "react";
+import Navbar from "../Navbar/Navbar";
 
 function Layout() {
-  return <Typography>Layout</Typography>;
+  return <Navbar/>
 }
 
 export default Layout;
