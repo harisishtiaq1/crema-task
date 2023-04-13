@@ -13,7 +13,7 @@ import {
   Toolbar,
   createTheme,
 } from "@mui/material";
-import Products from "../Products/Products";
+import Filters from "../Products/Filters"
 import React from "react";
 import Transition from "../../Assets/Transition.png";
 const drawerWidth = 200;
@@ -108,7 +108,7 @@ function Navbar() {
             {drawer}
           </Drawer>
         </Box>
-        <Products />
+        <Filters />
       </Box>
     </ThemeProvider>
   );
