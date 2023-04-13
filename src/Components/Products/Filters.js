@@ -48,7 +48,7 @@ function Filters() {
         <Grid container>
           <Grid item xs={12} sm={3}>
             <Scrollbars
-              style={{ width: 270, height: 500 }}
+              style={{ width: 300, height: 500 }}
               autoHide={true}
               renderThumbVertical={({ style, ...props }) => (
                 <div {...props} style={{ ...style, ...thumbStyle }} />
