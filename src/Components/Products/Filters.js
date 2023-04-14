@@ -1,18 +1,24 @@
 import {
   Box,
   Checkbox,
+  Collapse,
   Divider,
   FormControlLabel,
   FormGroup,
   Grid,
+  List,
+  ListItemButton,
+  ListItemText,
   Paper,
   Slider,
   Stack,
   Typography,
 } from "@mui/material";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import React from "react";
 import Scrollbars from "react-custom-scrollbars";
 import Products from "./Products";
+import { ExpandMore } from "@mui/icons-material";
 const marks = [
   {
     value: 0,
@@ -32,6 +38,11 @@ const thumbStyle = {
   height: "5px",
 };
 function Filters() {
+  const [open, setOpen] = React.useState(true);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
   const [value, setValue] = React.useState([10, 37]);
 
   const handleChange = (event, newValue) => {
@@ -79,8 +90,46 @@ function Filters() {
                     ml: 3,
                   }}
                 >
-                  Customization
+                  CATEGORIES
                 </Typography>
+                <List
+                  sx={{
+                    width: "100%",
+                    maxWidth: 200,
+                    bgcolor: "background.paper",
+                  }}
+                >
+                  <ListItemButton onClick={handleClick}>
+                    {open ? (
+                      <ExpandMore />
+                    ) : (
+                      <ArrowForwardIosIcon sx={{ fontSize: "12px" }} />
+                    )}
+                    <ListItemText
+                      sx={{ fontSize: "12px", ml: 3, color: "grey" }}
+                      primary="Watches"
+                    />
+                  </ListItemButton>
+                  <Collapse in={open} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                      <ListItemButton
+                        sx={{ pl: 4, width: "200px", ml: 6, color: "grey" }}
+                      >
+                        <ListItemText primary="Mens Watches" />
+                      </ListItemButton>
+                      <ListItemButton
+                        sx={{ pl: 4, width: "200px", ml: 6, color: "grey" }}
+                      >
+                        <ListItemText primary="Women Watches" />
+                      </ListItemButton>
+                      <ListItemButton
+                        sx={{ pl: 4, width: "200px", ml: 6, color: "grey" }}
+                      >
+                        <ListItemText primary="Kids Watches" />
+                      </ListItemButton>
+                    </List>
+                  </Collapse>
+                </List>
                 <Divider variant="middle" sx={{ mt: 2 }} />
                 <Typography
                   sx={{
@@ -279,7 +328,7 @@ function Filters() {
             </Scrollbars>
           </Grid>
           <Grid item xs={12} sm={9}>
-            <Products/>
+            <Products />
           </Grid>
         </Grid>
       </Stack>
