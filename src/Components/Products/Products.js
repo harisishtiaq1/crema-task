@@ -10,44 +10,58 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import React from "react";
 import ListIcon from "@mui/icons-material/List";
 import SearchIcon from "@mui/icons-material/Search";
 import ViewCompactIcon from "@mui/icons-material/ViewCompact";
-import Item from "../../Assets/item-2.png";
+import Laptop from "../../Assets/item-2.png";
+import Camera from "../../Assets/item-4.png";
+import HeadPhones from "../../Assets/item-3.png";
+import Mobile from "../../Assets/item-1.png";
+import Scrollbars from "react-custom-scrollbars";
+
+const thumbStyle = {
+  backgroundColor: "#888",
+  borderRadius: "6px",
+  cursor: "pointer",
+  width: "4px",
+  height: "5px",
+};
 const items = [
   {
-    src: Item,
+    src: Laptop,
     alt: "img1",
     text: "HP Pavilion Gaming Ryzen 7 Octa Core 4800H",
     desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
   },
   {
-    src: Item,
+    src: Camera,
     alt: "img2",
     text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
     desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
   },
   {
-    src: Item,
+    src: HeadPhones,
     alt: "img3",
     text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
     desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
   },
   {
-    src: Item,
+    src: Mobile,
     alt: "img1",
     text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
     desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
   },
   {
-    src: Item,
+    src: Camera,
     alt: "img2",
     text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
     desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
   },
   {
-    src: Item,
+    src: HeadPhones,
     alt: "img3",
     text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
     desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
@@ -57,11 +71,11 @@ const items = [
 function Products() {
   return (
     <>
-      <Box position="fixed">
+      <Box position="static">
         <Paper
           sx={{
             paddingTop: "7px",
-            width: "1000px",
+            width: "990px",
             height: "60px",
             display: "flex",
             justifyContent: "space-between",
@@ -105,12 +119,17 @@ function Products() {
             >
               <ViewCompactIcon fontSize="medium" />
             </IconButton>
+            <IconButton>
+              <ArrowBackIosIcon fontSize="small" />
+            </IconButton>
+            <IconButton>
+              <ArrowForwardIosIcon fontSize="small" />
+            </IconButton>
           </Box>
         </Paper>
       </Box>
       <Paper
         sx={{
-          mt: 6,
           backgroundColor: "transparent",
           paddingTop: "7px",
           width: "990px",
@@ -118,37 +137,63 @@ function Products() {
           justifyContent: "space-between",
         }}
       >
-        <Grid container spacing={2}>
-          {items.map((item) => (
-            <Grid item xs={6} key={item}>
-              <Card
-                sx={{
-                  margin: "13px",
-                  borderRadius: "40px",
-                  paddingTop: "10px",
-                  width: 450,
-                  height: 420,
-                  boxShadow:
-                    "3px 3px 5px rgb(0 0 0 / 25%), -3px -3Fpx 5px rgb(255 255 255 / 6%)",
-                }}
-              >
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    sx={{ width: "250px", ml: 12, mt: 5 }}
-                    image={item.src}
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h6" component="h1">
-                      {item.text}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+        <Scrollbars
+          style={{ width: 990, height: 430 }}
+          autoHide={true}
+          renderThumbVertical={({ style, ...props }) => (
+            <div {...props} style={{ ...style, ...thumbStyle }} />
+          )}
+        >
+          <Grid container spacing={2}>
+            {items.map((item) => (
+              <Grid item xs={6} key={item}>
+                <Card
+                  sx={{
+                    margin: "13px",
+                    borderRadius: "40px",
+                    paddingTop: "10px",
+                    width: 450,
+                    height: 420,
+                    boxShadow:
+                      "3px 3px 5px rgb(0 0 0 / 25%), -3px -3Fpx 5px rgb(255 255 255 / 6%)",
+                  }}
+                >
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      sx={{ maxWidth: "250px", height: "200px", ml: 12, mt: 5 }}
+                      image={item.src}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography
+                        gutterBottom
+                        variant="h6"
+                        component="h6"
+                        sx={{ fontWeight: "bold", fontSize: "17px" }}
+                      >
+                        {item.text}
+                      </Typography>
+                      <Typography
+                        gutterBottom
+                        variant="p"
+                        component="h6"
+                        sx={{
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          fontSize: "15px",
+                          color: "grey",
+                        }}
+                      >
+                        {item.desc}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Scrollbars>
       </Paper>
     </>
   );
