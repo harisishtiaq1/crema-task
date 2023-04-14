@@ -66,6 +66,42 @@ const items = [
     text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
     desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
   },
+  {
+    src: Laptop,
+    alt: "img1",
+    text: "HP Pavilion Gaming Ryzen 7 Octa Core 4800H",
+    desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
+  },
+  {
+    src: Camera,
+    alt: "img2",
+    text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
+    desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
+  },
+  {
+    src: HeadPhones,
+    alt: "img3",
+    text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
+    desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
+  },
+  {
+    src: Mobile,
+    alt: "img1",
+    text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
+    desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
+  },
+  {
+    src: Camera,
+    alt: "img2",
+    text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
+    desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
+  },
+  {
+    src: HeadPhones,
+    alt: "img3",
+    text: "NIKON Z6 II Body Mirrorless Camera with 64GB SD",
+    desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
+  },
 ];
 
 function Products() {

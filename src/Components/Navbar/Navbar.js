@@ -18,8 +18,6 @@ import React from "react";
 import Transition from "../../Assets/Transition.png";
 const drawerWidth = 200;
 const navItems = [
-  "Products",
-  "Product Detail",
   "Orders",
   "Cart",
   "Checkout",
@@ -77,7 +75,7 @@ function Navbar() {
                     my: 2,
                     fontSize: "17px",
                     cursor: "pointer",
-                    color: "Black",
+                    color: "white",
                     textDecoration: "none",
                     fontFamily: " Poppins, sans-serif",
                     fontWeight: "bold",
