@@ -1,5 +1,15 @@
-import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  IconButton,
+  Paper,
+  Radio,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
+import EditIcon from "@mui/icons-material/Edit";
 
 function Checkout() {
   return (
@@ -12,8 +22,60 @@ function Checkout() {
         </Box>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Paper sx={{width:'800px',height:"400px"}}>
-              <Typography>Delivery Address</Typography>
+            <Paper sx={{ width: "900px", height: "400px" }}>
+              <Typography
+                variant="h6"
+                component="h6"
+                sx={{ mt: 2, ml: 2, fontWeight: "bold" }}
+              >
+                Delivery Address
+              </Typography>
+
+              <Box
+                sx={{
+                  border: "1px solid grey",
+                  borderRadius: "10px",
+                  width: "800px",
+                  ml: 5,
+                  mt: 2,
+                  height: "150px",
+                }}
+              >
+                <Stack direction="row">
+                  <Radio
+                    value="a"
+                    name="radio-buttons"
+                    inputProps={{ "aria-label": "A" }}
+                  />
+                  {/* <Stack
+                    sx={{ display: "flex", justifyContent: "space-between",alignItems:'space-between' }}
+                  > */}
+                    <Stack direction="column">
+                      <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
+                        Crema User +1 508-966-0591
+                      </Typography>
+                      <Typography sx={{ mt: 1, ml: 1 }}>
+                        777 Brockton Avenue, Abington MA, 2351
+                      </Typography>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          padding: "8px",
+                          fontSize: "10px",
+                          fontFamily: "Sans-serif",
+                          mr: 5,
+                          width: "120px",
+                        }}
+                      >
+                        Add Orders
+                      </Button>
+                    </Stack>
+                    <IconButton>
+                      <EditIcon />
+                    </IconButton>
+                  </Stack>
+                {/* </Stack> */}
+              </Box>
             </Paper>
           </Grid>
         </Grid>
