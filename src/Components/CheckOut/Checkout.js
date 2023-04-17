@@ -33,7 +33,7 @@ function Checkout() {
                 Delivery Address
               </Typography>
 
-              <Stack
+              <Box
                 sx={{
                   border: "1px solid lightgrey",
                   borderRadius: "10px",
@@ -79,7 +79,7 @@ function Checkout() {
                       <EditIcon />
                     </IconButton>
                   </Stack>
-              </Stack>
+              </Box>
               <Box
                 sx={{
                   border: "1px solid lightgrey",
@@ -114,7 +114,7 @@ function Checkout() {
                         fontFamily: "Sans-serif",
                         mr: 5,
                         width: "120px",
-                        mt: 3,
+                        mt: 1,
                       }}
                     >
                       Add Orders
