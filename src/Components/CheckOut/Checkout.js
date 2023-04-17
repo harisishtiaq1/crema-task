@@ -42,38 +42,43 @@ function Checkout() {
                 }}
               >
                 <Stack direction="row">
-                  <Radio
-                    value="a"
-                    name="radio-buttons"
-                    inputProps={{ "aria-label": "A" }}
-                  />
+                  <Stack sx={{ mt: 2, ml: 2 }}>
+                    <Radio
+                      value="a"
+                      name="radio-buttons"
+                      inputProps={{ "aria-label": "A" }}
+                    />
+                  </Stack>
                   {/* <Stack
                     sx={{ display: "flex", justifyContent: "space-between",alignItems:'space-between' }}
                   > */}
-                    <Stack direction="column">
-                      <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
-                        Crema User +1 508-966-0591
-                      </Typography>
-                      <Typography sx={{ mt: 1, ml: 1 }}>
-                        777 Brockton Avenue, Abington MA, 2351
-                      </Typography>
-                      <Button
-                        variant="contained"
-                        sx={{
-                          padding: "8px",
-                          fontSize: "10px",
-                          fontFamily: "Sans-serif",
-                          mr: 5,
-                          width: "120px",
-                        }}
-                      >
-                        Add Orders
-                      </Button>
-                    </Stack>
+                  <Stack direction="column">
+                    <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
+                      Crema User +1 508-966-0591
+                    </Typography>
+                    <Typography sx={{ mt: 1, ml: 1 }}>
+                      777 Brockton Avenue, Abington MA, 2351
+                    </Typography>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        padding: "8px",
+                        fontSize: "10px",
+                        fontFamily: "Sans-serif",
+                        mr: 5,
+                        width: "120px",
+                        mt: 3,
+                      }}
+                    >
+                      Add Orders
+                    </Button>
+                  </Stack>
+                  <Stack>
                     <IconButton>
                       <EditIcon />
                     </IconButton>
                   </Stack>
+                </Stack>
                 {/* </Stack> */}
               </Box>
             </Paper>
