@@ -151,6 +151,7 @@ function Filters() {
                   }}
                 >
                   <Slider
+                  key={value}
                     getAriaLabel={() => "Temperature range"}
                     value={value}
                     onChange={handleChange}

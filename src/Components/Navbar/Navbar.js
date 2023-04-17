@@ -13,13 +13,13 @@ import {
   Toolbar,
   createTheme,
 } from "@mui/material";
-// import Filters from "../Products/Filters"
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Transition from "../../Assets/Transition.png";
-// import Orders from "../RecentOrders/Orders";
-import Checkout from "../CheckOut/Checkout";
+import Filters from "../Products/Filters";
 const drawerWidth = 200;
-const navItems = ["Orders", "Cart", "Checkout", "Confirmation"];
+
+const navItems = ["Products", "Orders", "Checkout"];
 function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
@@ -39,9 +39,16 @@ function Navbar() {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton>
-              <ListItemText primary={item} />
+          <ListItem key={item.name} disablePadding>
+            <ListItemButton component={NavLink} to={item.to}>
+              <ListItemText
+                primary={item.name}
+                sx={{
+                  "&:hover": {
+                    color: "white",
+                  },
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -68,6 +75,7 @@ function Navbar() {
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((items, index) => (
                 <Link
+                  href="/"
                   key={index}
                   sx={{
                     mr: 3,
@@ -92,7 +100,7 @@ function Navbar() {
             open={mobileOpen}
             onClose={handleDrawerToggle}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true,
             }}
             sx={{
               display: { xs: "block", sm: "none" },
@@ -105,9 +113,7 @@ function Navbar() {
             {drawer}
           </Drawer>
         </Box>
-        {/* <Filters /> */}
-        {/* <Orders/> */}
-        <Checkout />
+        <Filters />
       </Box>
     </ThemeProvider>
   );
