@@ -16,7 +16,8 @@ import {
 // import Filters from "../Products/Filters"
 import React from "react";
 import Transition from "../../Assets/Transition.png";
-import Orders from "../RecentOrders/Orders";
+// import Orders from "../RecentOrders/Orders";
+import Checkout from "../CheckOut/Checkout";
 const drawerWidth = 200;
 const navItems = [
   "Orders",
@@ -108,7 +109,8 @@ function Navbar() {
           </Drawer>
         </Box>
         {/* <Filters /> */}
-        <Orders/>
+        {/* <Orders/> */}
+        <Checkout/>
       </Box>
     </ThemeProvider>
   );
