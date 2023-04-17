@@ -49,9 +49,6 @@ function Checkout() {
                       inputProps={{ "aria-label": "A" }}
                     />
                   </Stack>
-                  {/* <Stack
-                    sx={{ display: "flex", justifyContent: "space-between",alignItems:'space-between' }}
-                  > */}
                   <Stack direction="column">
                     <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
                       Crema User +1 508-966-0591
@@ -79,7 +76,6 @@ function Checkout() {
                     </IconButton>
                   </Stack>
                 </Stack>
-                {/* </Stack> */}
               </Box>
             </Paper>
           </Grid>
