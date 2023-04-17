@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import Products from "../Products/Products";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Orders from "../RecentOrders/Orders";
 import Checkout from "../CheckOut/Checkout";
@@ -11,7 +10,7 @@ function Layout() {
     <BrowserRouter>
       <Navbar>
         <Routes>
-          <Route path="/" exact element={<Filters/>} />
+          <Route path="/" exact element={<Filters />} />
           <Route path="/orders" exact element={<Orders />} />
           <Route path="/checkout" exact element={<Checkout />} />
         </Routes>
