@@ -57,7 +57,7 @@ function Navbar() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ backgroundColor: "#F4F7FE" }}>
+      <Box sx={{ backgroundColor: "#F4F7FE",fontFamily: "Poppins, sans-serif" }}>
         <AppBar sx={{ background: "blueViolet" }}>
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             <Link href="/">
