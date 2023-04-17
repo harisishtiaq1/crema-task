@@ -22,7 +22,9 @@ function Checkout() {
         </Box>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Paper sx={{ width: "900px", height: "400px" }}>
+            <Paper
+              sx={{ width: "900px", borderRadius: "14px", padding: "10px" }}
+            >
               <Typography
                 variant="h6"
                 component="h6"
@@ -33,12 +35,13 @@ function Checkout() {
 
               <Box
                 sx={{
-                  border: "1px solid grey",
+                  border: "1px solid lightgrey",
                   borderRadius: "10px",
                   width: "800px",
                   ml: 5,
                   mt: 2,
-                  height: "150px",
+                  height: "100%",
+                  padding: "10px",
                 }}
               >
                 <Stack direction="row">
@@ -64,7 +67,101 @@ function Checkout() {
                         fontFamily: "Sans-serif",
                         mr: 5,
                         width: "120px",
-                        mt: 3,
+                        mt: 1,
+                      }}
+                    >
+                      Add Orders
+                    </Button>
+                  </Stack>
+                  <Stack>
+                    <IconButton>
+                      <EditIcon />
+                    </IconButton>
+                  </Stack>
+                </Stack>
+              </Box>
+              <Box
+                sx={{
+                  border: "1px solid lightgrey",
+                  borderRadius: "10px",
+                  width: "800px",
+                  ml: 5,
+                  mt: 2,
+                  height: "100%",
+                  padding: "10px",
+                }}
+              >
+                <Stack direction="row">
+                  <Stack sx={{ mt: 2, ml: 2 }}>
+                    <Radio
+                      value="a"
+                      name="radio-buttons"
+                      inputProps={{ "aria-label": "A" }}
+                    />
+                  </Stack>
+                  <Stack direction="column">
+                    <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
+                      Crema User +1 508-966-0591
+                    </Typography>
+                    <Typography sx={{ mt: 1, ml: 1 }}>
+                      777 Brockton Avenue, Abington MA, 2351
+                    </Typography>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        padding: "8px",
+                        fontSize: "10px",
+                        fontFamily: "Sans-serif",
+                        mr: 5,
+                        width: "120px",
+                        mt: 1,
+                      }}
+                    >
+                      Add Orders
+                    </Button>
+                  </Stack>
+                  <Stack>
+                    <IconButton>
+                      <EditIcon />
+                    </IconButton>
+                  </Stack>
+                </Stack>
+              </Box>
+              <Box
+                sx={{
+                  border: "1px solid lightgrey",
+                  borderRadius: "10px",
+                  width: "800px",
+                  ml: 5,
+                  mt: 2,
+                  height: "100%",
+                  padding: "10px",
+                }}
+              >
+                <Stack direction="row">
+                  <Stack sx={{ mt: 2, ml: 2 }}>
+                    <Radio
+                      value="a"
+                      name="radio-buttons"
+                      inputProps={{ "aria-label": "A" }}
+                    />
+                  </Stack>
+                  <Stack direction="column">
+                    <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
+                      Crema User +1 508-966-0591
+                    </Typography>
+                    <Typography sx={{ mt: 1, ml: 1 }}>
+                      777 Brockton Avenue, Abington MA, 2351
+                    </Typography>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        padding: "8px",
+                        fontSize: "10px",
+                        fontFamily: "Sans-serif",
+                        mr: 5,
+                        width: "120px",
+                        mt: 1,
                       }}
                     >
                       Add Orders
