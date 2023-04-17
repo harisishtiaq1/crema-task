@@ -19,12 +19,7 @@ import Transition from "../../Assets/Transition.png";
 // import Orders from "../RecentOrders/Orders";
 import Checkout from "../CheckOut/Checkout";
 const drawerWidth = 200;
-const navItems = [
-  "Orders",
-  "Cart",
-  "Checkout",
-  "Confirmation",
-];
+const navItems = ["Orders", "Cart", "Checkout", "Confirmation"];
 function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
@@ -57,7 +52,9 @@ function Navbar() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ backgroundColor: "#F4F7FE",fontFamily: "Poppins, sans-serif" }}>
+      <Box
+        sx={{ backgroundColor: "#F4F7FE", fontFamily: "Poppins, sans-serif" }}
+      >
         <AppBar sx={{ background: "blueViolet" }}>
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             <Link href="/">
@@ -110,7 +107,7 @@ function Navbar() {
         </Box>
         {/* <Filters /> */}
         {/* <Orders/> */}
-        <Checkout/>
+        <Checkout />
       </Box>
     </ThemeProvider>
   );

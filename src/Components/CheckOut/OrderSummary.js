@@ -15,13 +15,11 @@ import React, { useState } from "react";
 
 function OrderSummary() {
   const [selectedOption, setSelectedOption] = useState(null);
-  
-
 
   const handleRadioChange = (event) => {
     setSelectedOption(event.target.value);
   };
-  
+
   return (
     <Stack>
       <Paper
