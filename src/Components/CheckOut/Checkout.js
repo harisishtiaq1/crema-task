@@ -45,13 +45,11 @@ function Checkout() {
                 }}
               >
                 <Stack direction="row">
-                  <Stack sx={{ mt: 2, ml: 2 }}>
                     <Radio
                       value="a"
                       name="radio-buttons"
                       inputProps={{ "aria-label": "A" }}
-                    />
-                  </Stack>
+                      />
                   <Stack direction="column">
                     <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
                       Crema User +1 508-966-0591
@@ -80,7 +78,7 @@ function Checkout() {
                     </IconButton>
                   </Stack>
               </Box>
-              <Box
+              {/* <Box
                 sx={{
                   border: "1px solid lightgrey",
                   borderRadius: "10px",
@@ -126,8 +124,8 @@ function Checkout() {
                     </IconButton>
                   </Stack>
                 </Stack>
-              </Box>
-              <Box
+              </Box> */}
+              {/* <Box
                 sx={{
                   border: "1px solid lightgrey",
                   borderRadius: "10px",
@@ -173,7 +171,7 @@ function Checkout() {
                     </IconButton>
                   </Stack>
                 </Stack>
-              </Box>
+              </Box> */}
             </Paper>
           </Grid>
         </Grid>
