@@ -23,7 +23,7 @@ function Checkout() {
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Paper
-              sx={{ width: "900px", borderRadius: "14px", padding: "10px" }}
+              sx={{ width: "900px", borderRadius: "14px", padding: "15px" }}
             >
               <Typography
                 variant="h6"
@@ -33,7 +33,7 @@ function Checkout() {
                 Delivery Address
               </Typography>
 
-              <Box
+              <Stack
                 sx={{
                   border: "1px solid lightgrey",
                   borderRadius: "10px",
@@ -73,13 +73,13 @@ function Checkout() {
                       Add Orders
                     </Button>
                   </Stack>
-                  <Stack>
+                </Stack>
+                  <Stack sx={{display:'flex',alignItems:'flex-end',justifyContent:'flex-end'}}>
                     <IconButton>
                       <EditIcon />
                     </IconButton>
                   </Stack>
-                </Stack>
-              </Box>
+              </Stack>
               <Box
                 sx={{
                   border: "1px solid lightgrey",
@@ -114,7 +114,7 @@ function Checkout() {
                         fontFamily: "Sans-serif",
                         mr: 5,
                         width: "120px",
-                        mt: 1,
+                        mt: 3,
                       }}
                     >
                       Add Orders
