@@ -14,9 +14,8 @@ import {
   createTheme,
 } from "@mui/material";
 import React from "react";
-import { NavLink } from "react-router-dom";
+
 import Transition from "../../Assets/Transition.png";
-import Orders from "../RecentOrders/Orders";
 const drawerWidth = 200;
 
 const navItems = [{name:"Products",to:"/"},{name:"Orders",to:"/orders"} ,{name:"Checkout",to:"/checkout"}];

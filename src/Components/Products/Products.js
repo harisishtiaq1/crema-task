@@ -25,7 +25,7 @@ const thumbStyle = {
   backgroundColor: "#888",
   borderRadius: "6px",
   cursor: "pointer",
-  width: "4px",
+  width: "7px",
   height: "5px",
 };
 const items = [
@@ -102,7 +102,6 @@ const items = [
     desc: "It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout.",
   },
 ];
-
 function Products() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);

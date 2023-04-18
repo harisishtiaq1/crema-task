@@ -27,7 +27,7 @@ const thumbStyle = {
   backgroundColor: "#888",
   borderRadius: "6px",
   cursor: "pointer",
-  width: "4px",
+  width: "7px",
   height: "5px",
 };
 
@@ -64,7 +64,7 @@ const rows = [
     payment: "Prepaid",
     color: "rgb(248, 78, 78)",
     bgColor: "rgba(248, 78, 78, 0.267)",
-    status: "pending",
+    status: "Pending",
   },
 
   {
@@ -99,7 +99,7 @@ const rows = [
     price: "$1020",
     color: "rgb(248, 78, 78)",
     bgColor: "rgba(248, 78, 78, 0.267)",
-    status: "pending",
+    status: "Pending",
     payment: "Prepaid",
   },
 
@@ -134,7 +134,7 @@ const rows = [
     price: "$1020",
     color: "rgb(248, 78, 78)",
     bgColor: "rgba(248, 78, 78, 0.267)",
-    status: "pending",
+    status: "Pending",
     payment: "Prepaid",
   },
   {
@@ -168,7 +168,7 @@ const rows = [
     price: "$1020",
     color: "rgb(248, 78, 78)",
     bgColor: "rgba(248, 78, 78, 0.267)",
-    status: "pending",
+    status: "Pending",
     payment: "Prepaid",
   },
 
@@ -203,7 +203,7 @@ const rows = [
     price: "$1020",
     color: "rgb(248, 78, 78)",
     bgColor: "rgba(248, 78, 78, 0.267)",
-    status: "pending",
+    status: "Pending",
     payment: "Prepaid",
   },
 
@@ -238,7 +238,7 @@ const rows = [
     price: "$1020",
     color: "rgb(248, 78, 78)",
     bgColor: "rgba(248, 78, 78, 0.267)",
-    status: "pending",
+    status: "Pending",
     payment: "Prepaid",
   },
 
@@ -267,7 +267,7 @@ const rows = [
 ];
 function Orders() {
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(12);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -407,9 +407,9 @@ function Orders() {
                       <Box
                         sx={{
                           color: row.color,
-                          fontSize: "14px",
+                          fontSize: "16px",
                           backgroundColor: row.bgColor,
-                          padding: "3px 5px",
+                          padding: "5px 5px",
                           display: "inline-block",
                         }}
                       >
