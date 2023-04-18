@@ -175,7 +175,7 @@ function Products() {
               count={items.length}
               page={page}
               rowsPerPage={rowsPerPage}
-              onChangePage={handleChangePage}
+              onPageChange={handleChangePage}
               onChangeRowsPerPage={handleChangeRowsPerPage}
               // labelDisplayedRows={() => ''}
               labelRowsPerPage={() => ""}

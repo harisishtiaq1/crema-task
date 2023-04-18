@@ -19,7 +19,7 @@ import Transition from "../../Assets/Transition.png";
 import Orders from "../RecentOrders/Orders";
 const drawerWidth = 200;
 
-const navItems = ["Products", "Orders", "Checkout"];
+const navItems = [{name:"Products",to:"/"},{name:"Orders",to:"/orders"} ,{name:"Checkout",to:"/checkout"}];
 function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
@@ -40,7 +40,7 @@ function Navbar() {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton component={NavLink} to={item.to}>
+            <ListItemButton>
               <ListItemText
                 primary={item.name}
                 sx={{
@@ -73,10 +73,8 @@ function Navbar() {
               ></Box>
             </Link>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((items, index) => (
                 <Link
                   href="/"
-                  key={index}
                   sx={{
                     mr: 3,
                     my: 2,
@@ -88,9 +86,38 @@ function Navbar() {
                     fontWeight: "bold",
                   }}
                 >
-                  {items}
+                  Products
                 </Link>
-              ))}
+                <Link
+                  href="/orders"
+                  sx={{
+                    mr: 3,
+                    my: 2,
+                    fontSize: "17px",
+                    cursor: "pointer",
+                    color: "white",
+                    textDecoration: "none",
+                    fontFamily: " Poppins, sans-serif",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Orders
+                </Link>
+                <Link
+                  href="/checkout"
+                  sx={{
+                    mr: 3,
+                    my: 2,
+                    fontSize: "17px",
+                    cursor: "pointer",
+                    color: "white",
+                    textDecoration: "none",
+                    fontFamily: " Poppins, sans-serif",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Check Out
+                </Link>
             </Box>
           </Toolbar>
         </AppBar>
@@ -113,7 +140,6 @@ function Navbar() {
             {drawer}
           </Drawer>
         </Box>
-        <Orders />
       </Box>
     </ThemeProvider>
   );

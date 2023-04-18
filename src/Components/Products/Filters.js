@@ -15,21 +15,10 @@ import {
   Typography,
 } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import React from "react";
+import React, { useState } from "react";
 import Scrollbars from "react-custom-scrollbars";
 import Products from "./Products";
 import { ExpandMore } from "@mui/icons-material";
-const marks = [
-  {
-    value: 0,
-    label: "$ 0",
-  },
-
-  {
-    value: 100,
-    label: "$ 500",
-  },
-];
 const thumbStyle = {
   backgroundColor: "#888",
   borderRadius: "6px",
@@ -37,13 +26,14 @@ const thumbStyle = {
   width: "4px",
   height: "5px",
 };
+
 function Filters() {
   const [open, setOpen] = React.useState(true);
 
   const handleClick = () => {
     setOpen(!open);
   };
-  const [value, setValue] = React.useState([10, 37]);
+  const [value, setValue] = useState([50, 400]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -150,14 +140,17 @@ function Filters() {
                     justifyContent: "center",
                   }}
                 >
+                
                   <Slider
-                  key={value}
-                    getAriaLabel={() => "Temperature range"}
                     value={value}
                     onChange={handleChange}
                     valueLabelDisplay="auto"
-                    marks={marks}
+                    min={0}
+                    max={500}
                   />
+                  <Typography sx={{position:"absolute",left:10,bottom:120}}>{`$${value[0]}`}</Typography>
+                  <Typography sx={{position:"absolute",right:40,bottom:120}}>{`$${value[1]}`}</Typography>
+                  
                 </Box>
                 <Divider variant="middle" sx={{ mt: 2 }} />
                 <Typography

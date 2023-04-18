@@ -46,7 +46,7 @@ const rows = [
 
   {
     id: "#SK232",
-    product: "Addida Shoes",
+    product: "Addidas Shoes",
     customer: "Myrtie Ferguson",
     delivery: "08-12-2020",
     price: "$100",
@@ -81,7 +81,7 @@ const rows = [
 
   {
     id: "#SK235",
-    product: "Addida Shoes",
+    product: "Addidas Shoes",
     customer: "Myrtie Ferguson",
     delivery: "08-12-2020",
     price: "$100",
@@ -116,7 +116,7 @@ const rows = [
   },
   {
     id: "#SK238",
-    product: "Addida Shoes",
+    product: "Addidas Shoes",
     customer: "Johnny Herrera",
     delivery: "08-12-2020",
     price: "$100",
@@ -150,7 +150,7 @@ const rows = [
   },
   {
     id: "#SK241",
-    product: "Addida Shoes",
+    product: "Addidas Shoes",
     customer: "Myrtie Ferguson",
     delivery: "08-12-2020",
     price: "$100",
@@ -185,7 +185,7 @@ const rows = [
   },
   {
     id: "#SK244",
-    product: "Addida Shoes",
+    product: "Addidas Shoes",
     customer: "Myrtie Ferguson",
     delivery: "08-12-2020",
     price: "$100",
@@ -220,7 +220,7 @@ const rows = [
   },
   {
     id: "#SK247",
-    product: "Addida Shoes",
+    product: "Addidas Shoes",
     customer: "Myrtie Ferguson",
     delivery: "08-12-2020",
     price: "$100",
@@ -255,7 +255,7 @@ const rows = [
   },
   {
     id: "#SK250",
-    product: "Addida Shoes",
+    product: "Addidas Shoes",
     customer: "Myrtie Ferguson",
     delivery: "08-12-2020",
     price: "$100",
@@ -329,7 +329,7 @@ function Orders() {
                     padding: "8px",
                     fontSize: "10px",
                     fontFamily: "Sans-serif",
-                    mr: 5,
+                    mr:2,
                   }}
                 >
                   Add Orders
@@ -344,7 +344,7 @@ function Orders() {
                   count={rows.length}
                   page={page}
                   rowsPerPage={rowsPerPage}
-                  onChangePage={handleChangePage}
+                  onPageChange={handleChangePage}
                   onChangeRowsPerPage={handleChangeRowsPerPage}
                   // labelDisplayedRows={() => ''}
                   labelRowsPerPage={() => ""}
@@ -379,7 +379,9 @@ function Orders() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
+              {rows
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((row) => (
                   <TableRow
                     key={row.name}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -444,9 +446,9 @@ function Orders() {
           <List>
             <ListItem>
               <Stack direction="column">
-              <ListItemText primary="Single-line item" />
-              <ListItemText primary="Single-line item" />
-              <ListItemText primary="Single-line item" />
+              <ListItemText primary="View Order" />
+              <ListItemText primary="Edit" />
+              <ListItemText primary="Delete" />
               </Stack>
             </ListItem>
           </List>
