@@ -16,7 +16,6 @@ import {
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Transition from "../../Assets/Transition.png";
-import Filters from "../Products/Filters";
 import Orders from "../RecentOrders/Orders";
 const drawerWidth = 200;
 
