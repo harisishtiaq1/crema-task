@@ -8,11 +8,10 @@ import {
   IconButton,
   InputBase,
   Paper,
+  TablePagination,
   Typography,
 } from "@mui/material";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import React from "react";
+import React, { useState } from "react";
 import ListIcon from "@mui/icons-material/List";
 import SearchIcon from "@mui/icons-material/Search";
 import ViewCompactIcon from "@mui/icons-material/ViewCompact";
@@ -105,6 +104,17 @@ const items = [
 ];
 
 function Products() {
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
   return (
     <>
       <Box position="static">
@@ -113,9 +123,9 @@ function Products() {
             paddingTop: "7px",
             width: "990px",
             height: "60px",
-            display: "flex",
-            justifyContent: "space-between",
             borderRadius: "16px 16px 0px 0px",
+            display:'flex',
+            justifyContent:'space-between'
           }}
         >
           <Paper
@@ -136,7 +146,7 @@ function Products() {
             </IconButton>
           </Paper>
 
-          <Box>
+          <Box sx={{display:'flex',justifyContent:'flex-end',alignItems:'center'}}>
             <IconButton
               sx={{
                 backgroundColor: "rgba(10, 143, 220, 0.05)",
@@ -155,13 +165,22 @@ function Products() {
             >
               <ViewCompactIcon fontSize="medium" />
             </IconButton>
-            <IconButton>
-              <ArrowBackIosIcon fontSize="small" />
-            </IconButton>
-            <IconButton>
-              <ArrowForwardIosIcon fontSize="small" />
-            </IconButton>
-          </Box>
+            <TablePagination
+              sx={{
+                ".css-16c50h-MuiInputBase-root-MuiTablePagination-select": {
+                  display: "none",
+                },
+              }}
+              component="div"
+              count={items.length}
+              page={page}
+              rowsPerPage={rowsPerPage}
+              onChangePage={handleChangePage}
+              onChangeRowsPerPage={handleChangeRowsPerPage}
+              // labelDisplayedRows={() => ''}
+              labelRowsPerPage={() => ""}
+            />
+              </Box>
         </Paper>
       </Box>
       <Paper
@@ -181,53 +200,60 @@ function Products() {
           )}
         >
           <Grid container spacing={2}>
-            {items.map((item) => (
-              <Grid item xs={6} key={item}>
-                <Card
-                  sx={{
-                    margin: "13px",
-                    borderRadius: "40px",
-                    paddingTop: "10px",
-                    width: 450,
-                    height: 420,
-                    boxShadow:
-                      "3px 3px 5px rgb(0 0 0 / 25%), -3px -3Fpx 5px rgb(255 255 255 / 6%)",
-                  }}
-                >
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      sx={{ maxWidth: "250px", height: "200px", ml: 12, mt: 5 }}
-                      image={item.src}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography
-                        gutterBottom
-                        variant="h6"
-                        component="h6"
-                        sx={{ fontWeight: "bold", fontSize: "17px" }}
-                      >
-                        {item.text}
-                      </Typography>
-                      <Typography
-                        gutterBottom
-                        variant="p"
-                        component="h6"
+            {items
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((item) => (
+                <Grid item xs={6} key={item}>
+                  <Card
+                    sx={{
+                      margin: "13px",
+                      borderRadius: "40px",
+                      paddingTop: "10px",
+                      width: 450,
+                      height: 420,
+                      boxShadow:
+                        "3px 3px 5px rgb(0 0 0 / 25%), -3px -3Fpx 5px rgb(255 255 255 / 6%)",
+                    }}
+                  >
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
                         sx={{
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                          fontSize: "15px",
-                          color: "grey",
+                          maxWidth: "250px",
+                          height: "200px",
+                          ml: 12,
+                          mt: 5,
                         }}
-                      >
-                        {item.desc}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Grid>
-            ))}
+                        image={item.src}
+                        alt="green iguana"
+                      />
+                      <CardContent>
+                        <Typography
+                          gutterBottom
+                          variant="h6"
+                          component="h6"
+                          sx={{ fontWeight: "bold", fontSize: "17px" }}
+                        >
+                          {item.text}
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="p"
+                          component="h6"
+                          sx={{
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                            fontSize: "15px",
+                            color: "grey",
+                          }}
+                        >
+                          {item.desc}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Grid>
+              ))}
           </Grid>
         </Scrollbars>
       </Paper>
