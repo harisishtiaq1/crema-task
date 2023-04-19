@@ -14,16 +14,10 @@ import {
   createTheme,
 } from "@mui/material";
 import React from "react";
-
 import Transition from "../../Assets/Transition.png";
 const drawerWidth = 200;
 
-const navItems = [
-  { name: "Products", to: "/" },
-  { name: "Orders", to: "/orders" },
-  { name: "Checkout", to: "/checkout" },
-  { name: "Cart", to: "/cart" },
-];
+const navItems = ["Products", "Orders", "Checkout", "Cart"];
 function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
