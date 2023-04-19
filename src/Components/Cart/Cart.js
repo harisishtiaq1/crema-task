@@ -86,7 +86,16 @@ function Cart() {
                       </Stack>
                     </TableCell>
                     <TableCell>{row.unitPrice}</TableCell>
-                    <TableCell>{row.carbs}</TableCell>
+                    <TableCell>
+                      <Box
+                        sx={{
+                          border: "1px solid grey",
+                          borderRadius: "14px",
+                          width: "120px",
+                          height: "40px",
+                        }}
+                      ></Box>
+                    </TableCell>
                     <TableCell>{row.protein}</TableCell>
                   </TableRow>
                 ))}
