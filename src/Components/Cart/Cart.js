@@ -20,19 +20,19 @@ const rows = [
     img: item1,
     name: "Mens's Exclusive Watch",
     desc: "Brand: FastTrack",
-    unitPrice:"$95"
+    unitPrice: "$95",
   },
   {
     img: item2,
     name: "HP Pavilion Gaming Ryzen 7 Octa Core 4800H",
     desc: "Brand: FastTrack",
-    unitPrice:"$1230"
+    unitPrice: "$1230",
   },
   {
     img: item3,
     name: "NIKON Z6 II Body Mirrorless Camera with 64GB SD Card",
     desc: "Brand: FastTrack",
-    unitPrice:"$1169"
+    unitPrice: "$1169",
   },
 ];
 function Cart() {
@@ -44,49 +44,56 @@ function Cart() {
             Cart
           </Typography>
         </Box>
-        <TableContainer sx={{ width: "900px" }} component={Paper}>
-          <Table aria-label="simple table">
-            <TableHead sx={{ height: "20px" }}>
-              <TableRow style={{ backgroundColor: "#F4F7FE" }}>
-                <TableCell sx={{ fontWeight: "bold" }}>Product</TableCell>
-                <TableCell sx={{ fontWeight: "bold" }}>Unit Price</TableCell>
-                <TableCell sx={{ fontWeight: "bold" }}>QTY</TableCell>
-                <TableCell sx={{ fontWeight: "bold" }}>Total</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody sx={{height:'30px'}}>
-              {rows.map((row) => (
-                <TableRow
-                  key={row.name}
-                >
-                  <TableCell align="left">
-                    <Stack direction="row">
-                      <Box
-                        component="img"
-                        src={row.img}
-                        sx={{
-                          mr: 1,
-                          width: "40px",
-                          height: "40px",
-                          borderRadius: "50%",
-                          ml: 3,
-                          mt: 1,
-                        }}
-                      />
-                      <Stack>
-                        <Typography>{row.name}</Typography>
-                        <Typography>{row.desc}</Typography>
-                      </Stack>
-                    </Stack>
-                  </TableCell>
-                  <TableCell>{row.unitPrice}</TableCell>
-                  <TableCell>{row.carbs}</TableCell>
-                  <TableCell>{row.protein}</TableCell>
+        <Paper
+          sx={{
+            width: "900px",
+            height: "30px",
+            borderRadius: "20px 20px 0px 0px",
+          }}
+        />
+        <Paper sx={{ width: "900px" }}>
+          <TableContainer sx={{ width: "900px" }}>
+            <Table aria-label="simple table">
+              <TableHead sx={{ height: "20px" }}>
+                <TableRow style={{ backgroundColor: "#F4F7FE" }}>
+                  <TableCell sx={{ fontWeight: "bold" }}>Product</TableCell>
+                  <TableCell sx={{ fontWeight: "bold" }}>Unit Price</TableCell>
+                  <TableCell sx={{ fontWeight: "bold" }}>QTY</TableCell>
+                  <TableCell sx={{ fontWeight: "bold" }}>Total</TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+              </TableHead>
+              <TableBody sx={{ height: "30px" }}>
+                {rows.map((row) => (
+                  <TableRow key={row.name}>
+                    <TableCell align="left">
+                      <Stack direction="row">
+                        <Box
+                          component="img"
+                          src={row.img}
+                          sx={{
+                            mr: 1,
+                            width: "40px",
+                            height: "40px",
+                            borderRadius: "50%",
+                            ml: 3,
+                            mt: 1,
+                          }}
+                        />
+                        <Stack>
+                          <Typography>{row.name}</Typography>
+                          <Typography>{row.desc}</Typography>
+                        </Stack>
+                      </Stack>
+                    </TableCell>
+                    <TableCell>{row.unitPrice}</TableCell>
+                    <TableCell>{row.carbs}</TableCell>
+                    <TableCell>{row.protein}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Paper>
       </Stack>
     </Box>
   );
