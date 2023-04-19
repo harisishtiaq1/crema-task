@@ -10,6 +10,8 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import item1 from "../../Assets/item-1.png";
 import item2 from "../../Assets/item-2.png";
 import item3 from "../../Assets/item-3.png";
@@ -58,14 +60,16 @@ function Cart() {
                 <TableRow style={{ backgroundColor: "#F4F7FE" }}>
                   <TableCell sx={{ fontWeight: "bold" }}>Product</TableCell>
                   <TableCell sx={{ fontWeight: "bold" }}>Unit Price</TableCell>
-                  <TableCell sx={{ fontWeight: "bold" }}>QTY</TableCell>
+                  <TableCell align="center" sx={{ fontWeight: "bold" }}>
+                    QTY
+                  </TableCell>
                   <TableCell sx={{ fontWeight: "bold" }}>Total</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody sx={{ height: "30px" }}>
                 {rows.map((row) => (
                   <TableRow key={row.name}>
-                    <TableCell align="left">
+                    <TableCell>
                       <Stack direction="row">
                         <Box
                           component="img"
@@ -75,7 +79,6 @@ function Cart() {
                             width: "40px",
                             height: "40px",
                             borderRadius: "50%",
-                            ml: 3,
                             mt: 1,
                           }}
                         />
@@ -93,8 +96,20 @@ function Cart() {
                           borderRadius: "14px",
                           width: "120px",
                           height: "40px",
+                          display: "flex",
+                          flexDirection: "row",
                         }}
-                      ></Box>
+                      >
+                        <Stack
+                          direction="row"
+                          spacing={2}
+                          sx={{ mt: 1, ml: 1 }}
+                        >
+                          <AddIcon />
+                          <Typography>123</Typography>
+                          <RemoveIcon />
+                        </Stack>
+                      </Box>
                     </TableCell>
                     <TableCell>{row.protein}</TableCell>
                   </TableRow>
