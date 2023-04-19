@@ -5,6 +5,7 @@ import Orders from "../src/Components/RecentOrders/Orders";
 import Checkout from "../src/Components/CheckOut/Checkout";
 import Filters from "../src/Components/Products/Filters";
 import { Box } from "@mui/material";
+import Cart from "./Components/Cart/Cart";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" exact element={<Filters />} />
           <Route path="/orders" exact element={<Orders />} />
           <Route path="/checkout" exact element={<Checkout />} />
+          <Route path="/cart" exact element={<Cart />} />
         </Routes>
       </Box>
     </BrowserRouter>
