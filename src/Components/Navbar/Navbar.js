@@ -18,7 +18,12 @@ import React from "react";
 import Transition from "../../Assets/Transition.png";
 const drawerWidth = 200;
 
-const navItems = [{name:"Products",to:"/"},{name:"Orders",to:"/orders"} ,{name:"Checkout",to:"/checkout"},{name:"Cart",to:"/cart"}];
+const navItems = [
+  { name: "Products", to: "/" },
+  { name: "Orders", to: "/orders" },
+  { name: "Checkout", to: "/checkout" },
+  { name: "Cart", to: "/cart" },
+];
 function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
@@ -72,66 +77,66 @@ function Navbar() {
               ></Box>
             </Link>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                <Link
-                  href="/"
-                  sx={{
-                    mr: 3,
-                    my: 2,
-                    fontSize: "17px",
-                    cursor: "pointer",
-                    color: "white",
-                    textDecoration: "none",
-                    fontFamily: " Poppins, sans-serif",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Products
-                </Link>
-                <Link
-                  href="/orders"
-                  sx={{
-                    mr: 3,
-                    my: 2,
-                    fontSize: "17px",
-                    cursor: "pointer",
-                    color: "white",
-                    textDecoration: "none",
-                    fontFamily: " Poppins, sans-serif",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Orders
-                </Link>
-                <Link
-                  href="/checkout"
-                  sx={{
-                    mr: 3,
-                    my: 2,
-                    fontSize: "17px",
-                    cursor: "pointer",
-                    color: "white",
-                    textDecoration: "none",
-                    fontFamily: " Poppins, sans-serif",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Check Out
-                </Link>
-                <Link
-                  href="/cart"
-                  sx={{
-                    mr: 3,
-                    my: 2,
-                    fontSize: "17px",
-                    cursor: "pointer",
-                    color: "white",
-                    textDecoration: "none",
-                    fontFamily: " Poppins, sans-serif",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Cart
-                </Link>
+              <Link
+                href="/"
+                sx={{
+                  mr: 3,
+                  my: 2,
+                  fontSize: "17px",
+                  cursor: "pointer",
+                  color: "white",
+                  textDecoration: "none",
+                  fontFamily: " Poppins, sans-serif",
+                  fontWeight: "bold",
+                }}
+              >
+                Products
+              </Link>
+              <Link
+                href="/orders"
+                sx={{
+                  mr: 3,
+                  my: 2,
+                  fontSize: "17px",
+                  cursor: "pointer",
+                  color: "white",
+                  textDecoration: "none",
+                  fontFamily: " Poppins, sans-serif",
+                  fontWeight: "bold",
+                }}
+              >
+                Orders
+              </Link>
+              <Link
+                href="/checkout"
+                sx={{
+                  mr: 3,
+                  my: 2,
+                  fontSize: "17px",
+                  cursor: "pointer",
+                  color: "white",
+                  textDecoration: "none",
+                  fontFamily: " Poppins, sans-serif",
+                  fontWeight: "bold",
+                }}
+              >
+                CheckOut
+              </Link>
+              <Link
+                href="/cart"
+                sx={{
+                  mr: 3,
+                  my: 2,
+                  fontSize: "17px",
+                  cursor: "pointer",
+                  color: "white",
+                  textDecoration: "none",
+                  fontFamily: " Poppins, sans-serif",
+                  fontWeight: "bold",
+                }}
+              >
+                Cart
+              </Link>
             </Box>
           </Toolbar>
         </AppBar>

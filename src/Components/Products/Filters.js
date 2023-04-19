@@ -143,20 +143,15 @@ function Filters() {
                     justifyContent: "center",
                   }}
                 >
-                  <Typography
-                    
-                  >{`$${value[0]}`}</Typography>
+                  <Typography>{`$${value[0]}`}</Typography>
                   <Slider
                     value={value}
                     onChange={handleChange}
                     valueLabelDisplay="auto"
                     min={0}
                     max={500}
-                    
                   />
-                  <Typography
-                   
-                  >{`$${value[1]}`}</Typography>
+                  <Typography>{`$${value[1]}`}</Typography>
                 </Box>
                 <Divider variant="middle" sx={{ mt: 2 }} />
                 <Typography
