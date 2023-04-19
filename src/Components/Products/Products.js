@@ -123,8 +123,8 @@ function Products() {
             width: "990px",
             height: "60px",
             borderRadius: "16px 16px 0px 0px",
-            display:'flex',
-            justifyContent:'space-between'
+            display: "flex",
+            justifyContent: "space-between",
           }}
         >
           <Paper
@@ -145,7 +145,13 @@ function Products() {
             </IconButton>
           </Paper>
 
-          <Box sx={{display:'flex',justifyContent:'flex-end',alignItems:'center'}}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "center",
+            }}
+          >
             <IconButton
               sx={{
                 backgroundColor: "rgba(10, 143, 220, 0.05)",
@@ -179,7 +185,7 @@ function Products() {
               // labelDisplayedRows={() => ''}
               labelRowsPerPage={() => ""}
             />
-              </Box>
+          </Box>
         </Paper>
       </Box>
       <Paper

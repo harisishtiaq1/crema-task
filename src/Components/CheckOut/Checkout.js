@@ -162,7 +162,7 @@ function Checkout() {
                   </Stack>
                   <Stack direction="column">
                     <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
-                      Crema User   &nbsp;&nbsp; &nbsp;+1 508-966-0593
+                      Crema User &nbsp;&nbsp; &nbsp;+1 508-966-0593
                     </Typography>
                     <Typography sx={{ mt: 1, ml: 1 }}>
                       777 Brockton Avenue, Abington MA, 2351

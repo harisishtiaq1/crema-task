@@ -329,7 +329,7 @@ function Orders() {
                     padding: "8px",
                     fontSize: "10px",
                     fontFamily: "Sans-serif",
-                    mr:2,
+                    mr: 2,
                   }}
                 >
                   Add Orders
@@ -379,55 +379,55 @@ function Orders() {
                 </TableRow>
               </TableHead>
               <TableBody>
-              {rows
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row) => (
-                  <TableRow
-                    key={row.name}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
-                    <TableCell
-                      sx={{
-                        textDecoration: "underline",
-                        color: "#A0C4EB",
-                        fontSize: "15px",
-                        height: "80px",
-                      }}
-                      component="th"
-                      scope="row"
+                {rows
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row) => (
+                    <TableRow
+                      key={row.name}
+                      sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                     >
-                      {row.id}
-                    </TableCell>
-                    <TableCell>{row.product}</TableCell>
-                    <TableCell>{row.customer}</TableCell>
-                    <TableCell>{row.delivery}</TableCell>
-                    <TableCell>{row.price}</TableCell>
-                    <TableCell>{row.payment}</TableCell>
-                    <TableCell>
-                      <Box
+                      <TableCell
                         sx={{
-                          color: row.color,
-                          fontSize: "16px",
-                          backgroundColor: row.bgColor,
-                          padding: "5px 5px",
-                          display: "inline-block",
+                          textDecoration: "underline",
+                          color: "#A0C4EB",
+                          fontSize: "15px",
+                          height: "80px",
                         }}
+                        component="th"
+                        scope="row"
                       >
-                        {row.status}
-                      </Box>
-                    </TableCell>
-                    <TableCell>
-                      <TableCell>
-                        <IconButton
-                          sx={{ backgroundColor: "none" }}
-                          onClick={() => setShowPaper(!showPaper)}
-                        >
-                          <MoreVertIcon />
-                        </IconButton>
+                        {row.id}
                       </TableCell>
-                    </TableCell>
-                  </TableRow>
-                ))}
+                      <TableCell>{row.product}</TableCell>
+                      <TableCell>{row.customer}</TableCell>
+                      <TableCell>{row.delivery}</TableCell>
+                      <TableCell>{row.price}</TableCell>
+                      <TableCell>{row.payment}</TableCell>
+                      <TableCell>
+                        <Box
+                          sx={{
+                            color: row.color,
+                            fontSize: "16px",
+                            backgroundColor: row.bgColor,
+                            padding: "5px 5px",
+                            display: "inline-block",
+                          }}
+                        >
+                          {row.status}
+                        </Box>
+                      </TableCell>
+                      <TableCell>
+                        <TableCell>
+                          <IconButton
+                            sx={{ backgroundColor: "none" }}
+                            onClick={() => setShowPaper(!showPaper)}
+                          >
+                            <MoreVertIcon />
+                          </IconButton>
+                        </TableCell>
+                      </TableCell>
+                    </TableRow>
+                  ))}
               </TableBody>
             </Table>
           </TableContainer>
@@ -446,9 +446,9 @@ function Orders() {
           <List>
             <ListItem>
               <Stack direction="column">
-              <ListItemText primary="View Order" />
-              <ListItemText primary="Edit" />
-              <ListItemText primary="Delete" />
+                <ListItemText primary="View Order" />
+                <ListItemText primary="Edit" />
+                <ListItemText primary="Delete" />
               </Stack>
             </ListItem>
           </List>
