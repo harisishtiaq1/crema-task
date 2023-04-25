@@ -17,7 +17,7 @@ import React from "react";
 import Transition from "../../Assets/Transition.png";
 const drawerWidth = 200;
 
-const navItems = ["Products", "Orders", "Checkout", "Cart"];
+const navItems = ["Products","ProductDetails","Orders", "Checkout", "Cart"];
 function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
@@ -85,6 +85,21 @@ function Navbar() {
                 }}
               >
                 Products
+              </Link>
+              <Link
+                href="/details"
+                sx={{
+                  mr: 3,
+                  my: 2,
+                  fontSize: "17px",
+                  cursor: "pointer",
+                  color: "white",
+                  textDecoration: "none",
+                  fontFamily: " Poppins, sans-serif",
+                  fontWeight: "bold",
+                }}
+              >
+                Product Details
               </Link>
               <Link
                 href="/orders"

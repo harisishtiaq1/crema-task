@@ -21,6 +21,7 @@ import item2 from "../../Assets/item-2.png";
 import item3 from "../../Assets/item-3.png";
 import React from "react";
 import OrderSummary from "./OrderSummary";
+import { useNavigate } from "react-router-dom";
 
 const rows = [
   {
@@ -46,6 +47,15 @@ const rows = [
   },
 ];
 function Cart() {
+  const nevigate = useNavigate();
+  const products = () => {
+    let path = "/products";
+    nevigate(path);
+  };
+  const checkout = () => {
+    let path = "/checkout";
+    nevigate(path);
+  };
   return (
     <Box sx={{ mt: 8, ml: 3 }}>
       <Stack sx={{ mt: 4 }}>
@@ -64,7 +74,7 @@ function Cart() {
                 borderRadius: "20px 20px 0px 0px",
               }}
             />
-            <Paper sx={{ width: "900px" }}>
+            <Paper sx={{ width: "900px", height: "400px" }}>
               <TableContainer sx={{ width: "900px" }}>
                 <Table aria-label="simple table">
                   <TableHead sx={{ height: "20px" }}>
@@ -145,25 +155,54 @@ function Cart() {
                   </TableBody>
                 </Table>
               </TableContainer>
+              <Box
+                sx={{ display: "flex", justifyContent: "space-between", mt: 5 }}
+              >
+                <Button
+                  variant="contained"
+                  onClick={() => products()}
+                  sx={{
+                    ml: 3,
+                    color: "rgb(255, 255, 255)",
+                    backgroundColor: "rgb(10, 143, 220)",
+                    boxShadow:
+                      "rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px",
+                    borderRradius: "8px",
+                    textTransform: "capitalize",
+                    fontWeight: 500,
+                    fontSsize: "0.875rem",
+                    lineHeight: 1.75,
+                    minWidth: "64px",
+                    padding: "6px 16px",
+                  }}
+                >
+                  Continue Shopping
+                </Button>
+                <Button
+                  variant="contained"
+                  onClick={() => checkout()}
+                  sx={{
+                    mr: 3,
+                    color: "rgb(255, 255, 255)",
+                    backgroundColor: "rgb(240, 79, 71)",
+                    boxShadow:
+                      "rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px",
+                    borderRradius: "8px",
+                    textTransform: "capitalize",
+                    fontWeight: 500,
+                    fontSsize: "0.875rem",
+                    lineHeight: 1.75,
+                    minWidth: "64px",
+                    padding: "6px 16px",
+                    '&:hover': {
+                      backgroundColor: "rgb(240, 79, 71)",
+                    },
+                  }}
+                >
+                  Check Out
+                </Button>
+              </Box>
             </Paper>
-            
-            <Paper
-              sx={{
-                width: "900px",
-                display:'flex',
-                justifyContent:'space-between',
-                height: "40px",
-                borderRadius: "0px 0px 20px 20px",
-                border:'none'
-              }}>
-
-              <Button variant="contained">
-                Continue Shopping
-              </Button>
-              <Button variant="contained">
-                Check Out
-              </Button>
-              </Paper>
           </Grid>
           <Grid item xs={12} sm={3} md={4}>
             <OrderSummary />
