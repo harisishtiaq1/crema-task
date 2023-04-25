@@ -6,22 +6,27 @@ import {
   Rating,
   Stack,
   TextField,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import React from "react";
+import InfoIcon from "@mui/icons-material/Info";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import item2 from "../../Assets/item-2.png";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import CachedIcon from "@mui/icons-material/Cached";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 function ProductDetails() {
   return (
     <Paper
       sx={{
         mt: 10,
         ml: 3,
-        borderRadius: "16px",
+        borderRadius: "14px",
+        height: "1000px",
       }}
     >
       <Stack
@@ -142,13 +147,115 @@ function ProductDetails() {
                 Special PriceGet extra ₹598 off (price inclusive of discount)
               </Typography>
             </Stack>
-            <Stack direction="row">
+            <Stack direction="row" spacing={20}>
               <Box>
                 <Typography fontWeight="bold" sx={{ mt: 1 }}>
                   Deliver to
                 </Typography>
-                <TextField label="Pin Code" sx={{height:"100px",borderRadius:"10px"}}/>
+                <TextField
+                  InputProps={{
+                    style: { borderRadius: "4px", height: "40px" },
+                  }}
+                  label="Pin Code"
+                />
+                <Typography sx={{ fontSize: "14px", mt: 2 }}>
+                  Delivery in 5-7 Days
+                </Typography>
+                <Typography sx={{ fontSize: "14px", mt: 2 }}>
+                  If ordered before 2:05 AM
+                </Typography>
               </Box>
+              <Box>
+                <Typography fontWeight="bold" sx={{ mt: 1 }}>
+                  Services
+                </Typography>
+                <Stack direction="row">
+                  <Tooltip title="return policy">
+                    <IconButton sx={{ mt: 1, color: "rgb(10, 143, 220)" }}>
+                      <CachedIcon fontSize="small" />
+                    </IconButton>
+                  </Tooltip>
+                  <Typography sx={{ fontSize: "14px", mt: 2 }}>
+                    30 Day Return Policy
+                  </Typography>
+                  <Tooltip title="info">
+                    <IconButton
+                      sx={{
+                        mt: 2.5,
+                        ml: 5,
+                        color: "grey",
+                        height: "10px",
+                        width: "8px",
+                      }}
+                    >
+                      <InfoIcon fontSize="small" />
+                    </IconButton>
+                  </Tooltip>
+                </Stack>
+                <Stack direction="row">
+                  <Tooltip title="COD available">
+                    <IconButton sx={{ mt: 1, color: "rgb(10, 143, 220)" }}>
+                      <MonetizationOnIcon fontSize="small" />
+                    </IconButton>
+                  </Tooltip>
+                  <Typography sx={{ fontSize: "14px", mt: 2 }}>
+                    Cash on Delivery available
+                  </Typography>
+                  <Tooltip title="info">
+                    <IconButton
+                      sx={{
+                        mt: 2.5,
+                        ml: 5,
+                        color: "grey",
+                        height: "10px",
+                        width: "8px",
+                      }}
+                    >
+                      <InfoIcon fontSize="small" />
+                    </IconButton>
+                  </Tooltip>
+                </Stack>
+              </Box>
+            </Stack>
+            <Divider variant="middle" sx={{ mt: 2 }} />
+            <Typography sx={{ fontWeight: "bold", fontSize: "15px", mt: 2 }}>
+              Specification
+            </Typography>
+            <Stack direction="row" sx={{ mt: 2 }} spacing={29}>
+              <Typography> Brand</Typography>
+              <Typography>JBL</Typography>
+            </Stack>
+            <Stack direction="row" sx={{ mt: 2 }} spacing={20}>
+              <Typography>Model Number</Typography>
+              <Typography>SH12</Typography>
+            </Stack>
+            <Stack direction="row" sx={{ mt: 2 }} spacing={29}>
+              <Typography>Color</Typography>
+              <Typography>RED</Typography>
+            </Stack>
+            <Stack direction="row" sx={{ mt: 2 }} spacing={22}>
+              <Typography>Inline Remote</Typography>
+              <Typography>No</Typography>
+            </Stack>
+            <Divider variant="middle" sx={{ mt: 2 }} />
+            <Typography sx={{ fontWeight: "bold", fontSize: "15px", mt: 2 }}>
+              Product Details
+            </Typography>
+            <Stack direction="row" sx={{ mt: 2 }} spacing={23}>
+              <Typography>Sweat Proof</Typography>
+              <Typography>Yes</Typography>
+            </Stack>
+            <Stack direction="row" sx={{ mt: 2 }} spacing={24}>
+              <Typography>Deep Bass</Typography>
+              <Typography>Yes</Typography>
+            </Stack>
+            <Stack direction="row" sx={{ mt: 2 }} spacing={20}>
+              <Typography>Water Resistant</Typography>
+              <Typography>Yes</Typography>
+            </Stack>
+            <Stack direction="row" sx={{ mt: 2 }} spacing={10}>
+              <Typography>System Requirements</Typography>
+              <Typography>BLUETOOTH</Typography>
             </Stack>
           </Stack>
         </Box>

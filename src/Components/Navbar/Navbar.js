@@ -43,7 +43,7 @@ function Navbar() {
                 primary={item.name}
                 sx={{
                   "&:hover": {
-                    color: "white",
+                    color: "black",
                   },
                 }}
               />
@@ -60,7 +60,7 @@ function Navbar() {
       <Box
         sx={{ backgroundColor: "#F4F7FE", fontFamily: "Poppins, sans-serif" }}
       >
-        <AppBar sx={{ background: "blueViolet" }}>
+        <AppBar sx={{ background: "white" }}>
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             <Link href="/">
               <Box
@@ -78,7 +78,7 @@ function Navbar() {
                   my: 2,
                   fontSize: "17px",
                   cursor: "pointer",
-                  color: "white",
+                  color: "black",
                   textDecoration: "none",
                   fontFamily: " Poppins, sans-serif",
                   fontWeight: "bold",
@@ -93,7 +93,7 @@ function Navbar() {
                   my: 2,
                   fontSize: "17px",
                   cursor: "pointer",
-                  color: "white",
+                  color: "black",
                   textDecoration: "none",
                   fontFamily: " Poppins, sans-serif",
                   fontWeight: "bold",
@@ -108,7 +108,7 @@ function Navbar() {
                   my: 2,
                   fontSize: "17px",
                   cursor: "pointer",
-                  color: "white",
+                  color: "black",
                   textDecoration: "none",
                   fontFamily: " Poppins, sans-serif",
                   fontWeight: "bold",
@@ -123,7 +123,7 @@ function Navbar() {
                   my: 2,
                   fontSize: "17px",
                   cursor: "pointer",
-                  color: "white",
+                  color: "black",
                   textDecoration: "none",
                   fontFamily: " Poppins, sans-serif",
                   fontWeight: "bold",
@@ -138,7 +138,7 @@ function Navbar() {
                   my: 2,
                   fontSize: "17px",
                   cursor: "pointer",
-                  color: "white",
+                  color: "black",
                   textDecoration: "none",
                   fontFamily: " Poppins, sans-serif",
                   fontWeight: "bold",

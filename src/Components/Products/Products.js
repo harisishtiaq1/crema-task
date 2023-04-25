@@ -20,6 +20,7 @@ import Camera from "../../Assets/item-4.png";
 import HeadPhones from "../../Assets/item-3.png";
 import Mobile from "../../Assets/item-1.png";
 import Scrollbars from "react-custom-scrollbars";
+import { useNavigate } from "react-router-dom";
 
 const thumbStyle = {
   backgroundColor: "#888",
@@ -103,6 +104,11 @@ const items = [
   },
 ];
 function Products() {
+  const nevigate = useNavigate();
+  const details = () => {
+    let path = "/details";
+    nevigate(path);
+  };
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
@@ -230,6 +236,7 @@ function Products() {
                         }}
                         image={item.src}
                         alt="green iguana"
+                        onClick={() => details()}
                       />
                       <CardContent>
                         <Typography

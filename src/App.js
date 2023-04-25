@@ -21,7 +21,6 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Filters />} />
           <Route path="/details" exact element={<ProductDetails/>} />
-
           <Route path="/orders" exact element={<Orders />} />
           <Route path="/checkout" exact element={<Checkout />} />
           <Route path="/cart" exact element={<Cart />} />
