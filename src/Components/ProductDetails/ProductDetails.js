@@ -11,6 +11,8 @@ import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import item2 from "../../Assets/item-2.png";
 function ProductDetails() {
   return (
     <Paper
@@ -44,7 +46,7 @@ function ProductDetails() {
             </Typography>
           </Stack>
         </Stack>
-        <Stack direction="row" spacing={1}>
+        <Stack direction="row" spacing={1} sx={{ mr: 3 }}>
           <IconButton
             sx={{
               backgroundColor: "rgb(0, 127, 177)",
@@ -77,9 +79,15 @@ function ProductDetails() {
           </IconButton>
         </Stack>
       </Stack>
-      <Divider variant="middle" sx={{ mt: 3 }}></Divider>
+      <Divider variant="middle" sx={{ mt: 3 }} />
+      <Box>
+        <IconButton>
+          <FavoriteBorderIcon />
+        </IconButton>
+        <Box sx={{ mt: 3 }} component="img" src={item2} />
+      </Box>
     </Paper>
   );
 }
-    
+
 export default ProductDetails;
