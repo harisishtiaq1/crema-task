@@ -1,8 +1,15 @@
-import { Paper, Rating, Stack, Typography } from "@mui/material";
+import {
+  Divider,
+  IconButton,
+  Paper,
+  Rating,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function ProductDetails() {
-  const [value, setValue] = React.useState(4);
   return (
     <Paper
       sx={{
@@ -15,7 +22,7 @@ function ProductDetails() {
         HP Pavilion Gaming Ryzen 7 Octa Core 4800H
       </Typography>
       <Stack direction="row" sx={{ ml: 3 }}>
-        <Rating name="read-only" value={value} readOnly />
+        <Rating name="read-only" value={4} readOnly />
         <Typography sx={{ ml: 2, color: "grey", fontSize: "13px", mt: 0.5 }}>
           4356 reviews
         </Typography>
@@ -23,6 +30,10 @@ function ProductDetails() {
           SKU : MB023
         </Typography>
       </Stack>
+      <IconButton>
+        <LinkedInIcon />
+      </IconButton>
+      <Divider variant="middle" sx={{ mt: 3 }}></Divider>
     </Paper>
   );
 }
