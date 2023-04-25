@@ -1,5 +1,6 @@
 import {
   Box,
+  IconButton,
   Paper,
   Stack,
   Table,
@@ -10,6 +11,7 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import item1 from "../../Assets/item-1.png";
@@ -23,18 +25,21 @@ const rows = [
     name: "Mens's Exclusive Watch",
     desc: "Brand: FastTrack",
     unitPrice: "$95",
+    totalPrice:"$95"
   },
   {
     img: item2,
     name: "HP Pavilion Gaming Ryzen 7 Octa Core 4800H",
     desc: "Brand: FastTrack",
     unitPrice: "$1230",
+    totalPrice:"$1230"
   },
   {
     img: item3,
     name: "NIKON Z6 II Body Mirrorless Camera with 64GB SD Card",
     desc: "Brand: FastTrack",
     unitPrice: "$1169",
+    totalPrice:"$1169"
   },
 ];
 function Cart() {
@@ -64,6 +69,7 @@ function Cart() {
                     QTY
                   </TableCell>
                   <TableCell sx={{ fontWeight: "bold" }}>Total</TableCell>
+                  <TableCell></TableCell>
                 </TableRow>
               </TableHead>
               <TableBody sx={{ height: "30px" }}>
@@ -94,7 +100,7 @@ function Cart() {
                         sx={{
                           border: "1px solid grey",
                           borderRadius: "14px",
-                          width: "120px",
+                          width: "100px",
                           height: "40px",
                           display: "flex",
                           flexDirection: "row",
@@ -105,13 +111,18 @@ function Cart() {
                           spacing={2}
                           sx={{ mt: 1, ml: 1 }}
                         >
-                          <AddIcon />
-                          <Typography>123</Typography>
-                          <RemoveIcon />
+                          <AddIcon fontSize="small" />
+                          <Typography sx={{ fontSize: "15px" }}>1</Typography>
+                          <RemoveIcon fontSize="small" />
                         </Stack>
                       </Box>
                     </TableCell>
-                    <TableCell>{row.protein}</TableCell>
+                    <TableCell>{row.totalPrice}</TableCell>
+                    <TableCell>
+                      <IconButton sx={{backgroundColor:"black",color:'white',width:"25px",height:'25px'}}>
+                        <CloseIcon fontSize="small"/>
+                        </IconButton>
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
