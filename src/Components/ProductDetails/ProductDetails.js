@@ -5,6 +5,7 @@ import {
   Paper,
   Rating,
   Stack,
+  TextField,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -141,9 +142,14 @@ function ProductDetails() {
                 Special PriceGet extra ₹598 off (price inclusive of discount)
               </Typography>
             </Stack>
-            <Typography fontWeight="bold" sx={{ mt: 1 }}>
-              Deliver to
-            </Typography>
+            <Stack direction="row">
+              <Box>
+                <Typography fontWeight="bold" sx={{ mt: 1 }}>
+                  Deliver to
+                </Typography>
+                <TextField label="Pin Code" sx={{height:"100px",borderRadius:"10px"}}/>
+              </Box>
+            </Stack>
           </Stack>
         </Box>
       </Stack>
