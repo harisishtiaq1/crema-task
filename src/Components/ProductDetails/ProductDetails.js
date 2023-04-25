@@ -12,6 +12,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import item2 from "../../Assets/item-2.png";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 function ProductDetails() {
   return (
     <Paper
@@ -91,8 +93,8 @@ function ProductDetails() {
         >
           <Box sx={{ mt: 3, width: "300px" }} component="img" src={item2} />
         </Box>
-        <Box>
-          <Stack direction="column">
+        <Box sx={{ mt: 2 }}>
+          <Stack direction="column" sx={{ ml: 5 }}>
             <Typography sx={{ fontWeight: "bold", fontSize: "16px" }}>
               $1000
             </Typography>
@@ -104,6 +106,43 @@ function ProductDetails() {
               }}
             >
               In Stoke
+            </Typography>
+            <Typography
+              sx={{
+                mt: 2,
+                color: "grey",
+                fontSize: "14px",
+              }}
+            >
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page looking at its layout. The point of
+              using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using Content here, making
+              it look like readable English. Many desktop publishing packages
+              and web page editors now use..
+            </Typography>
+            <Divider sx={{ mt: 2 }} />
+            <Typography fontWeight="bold" sx={{ mt: 1 }}>
+              Available Offers
+            </Typography>
+            <Stack direction="row">
+              <IconButton sx={{ color: "rgb(10, 143, 220)", fontSize: "18px" }}>
+                <LocalOfferIcon fontSize="small" />
+              </IconButton>
+              <Typography sx={{ fontSize: "12px", mt: 1 }}>
+                Special PriceGet extra ₹598 off (price inclusive of discount)
+              </Typography>
+            </Stack>
+            <Stack direction="row">
+              <IconButton sx={{ color: "rgb(10, 143, 220)", fontSize: "18px" }}>
+                <CalendarMonthIcon fontSize="small" />
+              </IconButton>
+              <Typography sx={{ fontSize: "12px", mt: 1 }}>
+                Special PriceGet extra ₹598 off (price inclusive of discount)
+              </Typography>
+            </Stack>
+            <Typography fontWeight="bold" sx={{ mt: 1 }}>
+              Deliver to
             </Typography>
           </Stack>
         </Box>
