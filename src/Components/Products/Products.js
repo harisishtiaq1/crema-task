@@ -182,7 +182,6 @@ function Products() {
               rowsPerPage={rowsPerPage}
               onPageChange={handleChangePage}
               onChangeRowsPerPage={handleChangeRowsPerPage}
-              // labelDisplayedRows={() => ''}
               labelRowsPerPage={() => ""}
             />
           </Box>
@@ -214,8 +213,8 @@ function Products() {
                       margin: "13px",
                       borderRadius: "40px",
                       paddingTop: "10px",
-                      width: 450,
-                      height: 420,
+                      width: "450px",
+                      height: "420px",
                       boxShadow:
                         "3px 3px 5px rgb(0 0 0 / 25%), -3px -3Fpx 5px rgb(255 255 255 / 6%)",
                     }}
@@ -224,8 +223,8 @@ function Products() {
                       <CardMedia
                         component="img"
                         sx={{
-                          maxWidth: "250px",
-                          height: "200px",
+                          maxWidth: 250,
+                          height: 200,
                           ml: 12,
                           mt: 5,
                         }}

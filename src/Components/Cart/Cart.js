@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Grid,
   IconButton,
   Paper,
@@ -145,6 +146,23 @@ function Cart() {
                 </Table>
               </TableContainer>
             </Paper>
+            <Paper
+              sx={{
+                width: "900px",
+                display:'flex',
+                justifyContent:'space-between',
+                height: "40px",
+                borderRadius: "0px 0px 20px 20px",
+              }}>
+
+              <Button variant="contained">
+                Continue Shopping
+              </Button>
+              <Button variant="contained">
+                Check Out
+              </Button>
+              </Paper>
+            
           </Grid>
           <Grid item xs={12} sm={3} md={4}>
             <OrderSummary />

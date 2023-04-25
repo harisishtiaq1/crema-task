@@ -1,25 +1,7 @@
-import {
-  Button,
-  Divider,
-  FormControl,
-  FormControlLabel,
-  Grid,
-  Paper,
-  Radio,
-  RadioGroup,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
-import React, { useState } from "react";
+import { Divider, Paper, Stack, Typography } from "@mui/material";
+import React from "react";
 
 function OrderSummary() {
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  const handleRadioChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
-
   return (
     <Stack>
       <Paper
