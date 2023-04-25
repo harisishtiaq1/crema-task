@@ -11,7 +11,11 @@ function App() {
   return (
     <BrowserRouter>
       <Box
-        sx={{ backgroundColor: "#F4F7FE", fontFamily: "Poppins, sans-serif" }}
+        sx={{
+          backgroundColor: "#F4F7FE",
+          fontFamily: "Poppins, sans-serif",
+          height: "90vh",
+        }}
       >
         <Navbar />
         <Routes>
