@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Divider,
   IconButton,
   Paper,
@@ -98,6 +99,45 @@ function ProductDetails() {
           }}
         >
           <Box sx={{ mt: 3, width: "300px" }} component="img" src={item2} />
+          <Button
+            sx={{
+              ml: 3,
+              color: "rgb(255, 255, 255)",
+              backgroundColor: "rgb(10, 143, 220)",
+              boxShadow:
+                "rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px",
+              borderRradius: "8px",
+              textTransform: "capitalize",
+              fontWeight: 500,
+              fontSsize: "0.875rem",
+              lineHeight: 1.75,
+              minWidth: "64px",
+              padding: "6px 16px",
+            }}
+          >
+            Add to Cart
+          </Button>
+          <Button
+            sx={{
+              mr: 3,
+              color: "rgb(255, 255, 255)",
+              backgroundColor: "rgb(240, 79, 71)",
+              boxShadow:
+                "rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px",
+              borderRradius: "8px",
+              textTransform: "capitalize",
+              fontWeight: 500,
+              fontSsize: "0.875rem",
+              lineHeight: 1.75,
+              minWidth: "64px",
+              padding: "6px 16px",
+              "&:hover": {
+                backgroundColor: "rgb(240, 79, 71)",
+              },
+            }}
+          >
+            Buy Now
+          </Button>
         </Box>
         <Box sx={{ mt: 2 }}>
           <Stack direction="column" sx={{ ml: 5 }}>
