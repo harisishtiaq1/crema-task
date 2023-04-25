@@ -11,7 +11,6 @@ import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import item2 from "../../Assets/item-2.png";
 function ProductDetails() {
   return (
@@ -80,12 +79,35 @@ function ProductDetails() {
         </Stack>
       </Stack>
       <Divider variant="middle" sx={{ mt: 3 }} />
-      <Box sx={{height:"100%"}}>
-        <IconButton sx={{display:'flex',justifyContent:'flex-end'}}>
-          <FavoriteBorderIcon />
-        </IconButton>
-        <Box sx={{ mt: 3 }} component="img" src={item2} />
-      </Box>
+      <Stack direction="row">
+        <Box
+          sx={{
+            width: "400px",
+            height: "300px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Box sx={{ mt: 3, width: "300px" }} component="img" src={item2} />
+        </Box>
+        <Box>
+          <Stack direction="column">
+            <Typography sx={{ fontWeight: "bold", fontSize: "16px" }}>
+              $1000
+            </Typography>
+            <Typography
+              sx={{
+                color: "rgb(10, 143, 220)",
+                fontWeight: "bold",
+                fontSize: "14px",
+              }}
+            >
+              In Stoke
+            </Typography>
+          </Stack>
+        </Box>
+      </Stack>
     </Paper>
   );
 }
