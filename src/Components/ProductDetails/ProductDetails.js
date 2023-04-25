@@ -80,8 +80,8 @@ function ProductDetails() {
         </Stack>
       </Stack>
       <Divider variant="middle" sx={{ mt: 3 }} />
-      <Box>
-        <IconButton>
+      <Box sx={{height:"100%"}}>
+        <IconButton sx={{display:'flex',justifyContent:'flex-end'}}>
           <FavoriteBorderIcon />
         </IconButton>
         <Box sx={{ mt: 3 }} component="img" src={item2} />
