@@ -134,22 +134,36 @@ function OrderSummary() {
                 <Grid item xs={12}>
                   <TextField
                     fullWidth
+                    InputProps={{
+                      style: { borderRadius: "10px" },
+                    }}
                     label="Full Name"
-                    sx={{ borderRadius: "4px" }}
                   />
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
                     fullWidth
+                    InputProps={{
+                      style: { borderRadius: "10px" },
+                    }}
                     label="Card Number"
-                    sx={{ borderRadius: "4px" }}
                   />
                 </Grid>
                 <Grid item xs={6}>
-                  <TextField label="Expiry Date" sx={{ borderRadius: "4px" }} />
+                  <TextField
+                    InputProps={{
+                      style: { borderRadius: "10px" },
+                    }}
+                    label="Expiry Date"
+                  />
                 </Grid>
                 <Grid item xs={6}>
-                  <TextField label="CVV" sx={{ borderRadius: "4px" }} />
+                  <TextField
+                    InputProps={{
+                      style: { borderRadius: "10px" },
+                    }}
+                    label="CVV"
+                  />
                 </Grid>
               </Grid>
             )}
@@ -163,7 +177,13 @@ function OrderSummary() {
             {selectedOption === "option3" && (
               <Grid container>
                 <Grid item xs={12}>
-                  <TextField fullWidth label="PayPal Email Address"></TextField>
+                  <TextField
+                    InputProps={{
+                      style: { borderRadius: "10px" },
+                    }}
+                    fullWidth
+                    label="PayPal Email Address"
+                  />
                 </Grid>
               </Grid>
             )}

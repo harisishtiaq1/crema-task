@@ -389,7 +389,7 @@ function Orders() {
                       <TableCell
                         sx={{
                           textDecoration: "underline",
-                          color: "#A0C4EB",
+                          color: "#1565C0",
                           fontSize: "15px",
                           height: "80px",
                         }}
