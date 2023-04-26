@@ -20,7 +20,13 @@ import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CachedIcon from "@mui/icons-material/Cached";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import { useNavigate } from "react-router-dom";
 function ProductDetails() {
+  const nevigate = useNavigate();
+  const cart = () => {
+    let path = "/cart";
+    nevigate(path);
+  };
   return (
     <Paper
       sx={{
@@ -140,6 +146,7 @@ function ProductDetails() {
                   backgroundColor: "rgb(240, 79, 71)",
                 },
               }}
+              onClick={() => cart()}
             >
               Buy Now
             </Button>
@@ -303,6 +310,10 @@ function ProductDetails() {
               <Typography>System Requirements</Typography>
               <Typography>BLUETOOTH</Typography>
             </Stack>
+            <Divider variant="middle" sx={{ mt: 2 }} />
+            <Typography sx={{ fontWeight: "bold", fontSize: "15px", mt: 2 }}>
+              Reviews
+            </Typography>
           </Stack>
         </Box>
       </Stack>
