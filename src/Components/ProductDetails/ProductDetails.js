@@ -1,8 +1,10 @@
 import {
   Box,
   Button,
+  CircularProgress,
   Divider,
   IconButton,
+  LinearProgress,
   Paper,
   Rating,
   Stack,
@@ -11,6 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import StarIcon from "@mui/icons-material/Star";
 import InfoIcon from "@mui/icons-material/Info";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -33,7 +36,7 @@ function ProductDetails() {
         mt: 10,
         ml: 3,
         borderRadius: "14px",
-        height: "1000px",
+        height: "2000px",
       }}
     >
       <Stack
@@ -313,6 +316,84 @@ function ProductDetails() {
             <Divider variant="middle" sx={{ mt: 2 }} />
             <Typography sx={{ fontWeight: "bold", fontSize: "15px", mt: 2 }}>
               Reviews
+            </Typography>
+            <Box sx={{ mt: 4, position: "relative" }}>
+              <CircularProgress
+                thickness={4}
+                size={180}
+                variant="determinate"
+                value={75}
+                sx={{ color: "green", strokeWidth: 4 }}
+              />
+              <Box sx={{ position: "absolute", top: 40, left: 40 }}>
+                <Typography sx={{ mt: 1, textAlign: "center" }}>
+                  4.8
+                  <IconButton sx={{ color: "black", mb: 1 }}>
+                    <StarIcon />
+                  </IconButton>
+                </Typography>
+                <Typography>Overall Rating</Typography>
+              </Box>
+            </Box>
+            <Typography sx={{ margin: 0 }}>
+              5
+              <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
+                <StarIcon fontSize="small" />
+              </IconButton>
+              <LinearProgress
+                variant="determinate"
+                value={35}
+                color="secondary"
+                sx={{ width: "200px" }}
+              />
+            </Typography>
+            <Typography sx={{ margin: 0 }}>
+              4
+              <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
+                <StarIcon fontSize="small" />
+              </IconButton>
+              <LinearProgress
+                variant="determinate"
+                value={35}
+                color="secondary"
+                sx={{ width: "200px" }}
+              />
+            </Typography>
+            <Typography sx={{ margin: 0 }}>
+              3
+              <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
+                <StarIcon fontSize="small" />
+              </IconButton>
+              <LinearProgress
+                variant="determinate"
+                value={35}
+                color="secondary"
+                sx={{ width: "200px" }}
+              />
+            </Typography>
+            <Typography sx={{ margin: 0 }}>
+              2
+              <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
+                <StarIcon fontSize="small" />
+              </IconButton>
+              <LinearProgress
+                variant="determinate"
+                value={35}
+                color="secondary"
+                sx={{ width: "200px" }}
+              />
+            </Typography>
+            <Typography sx={{ margin: 0 }}>
+              1
+              <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
+                <StarIcon fontSize="small" />
+              </IconButton>
+              <LinearProgress
+                variant="determinate"
+                value={35}
+                color="secondary"
+                sx={{ width: "200px" }}
+              />
             </Typography>
           </Stack>
         </Box>
