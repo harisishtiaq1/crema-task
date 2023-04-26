@@ -12,19 +12,26 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Laptop from "../../Assets/item-2.png";
+import Camera from "../../Assets/item-4.png";
+import HeadPhones from "../../Assets/item-3.png";
+import Mobile from "../../Assets/item-1.png";
 import StarIcon from "@mui/icons-material/Star";
 import InfoIcon from "@mui/icons-material/Info";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import item2 from "../../Assets/item-2.png";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CachedIcon from "@mui/icons-material/Cached";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import { useNavigate } from "react-router-dom";
+const images = [Laptop, Camera, HeadPhones, Mobile];
 function ProductDetails() {
+  const [slideIndex, setSlideIndex] = useState(0);
   const nevigate = useNavigate();
   const cart = () => {
     let path = "/cart";
@@ -107,53 +114,34 @@ function ProductDetails() {
             flexDirection: "column",
           }}
         >
-          <Stack direction="row" sx={{ mt: 10, ml: 2 }}>
+          <Stack direction="row" sx={{ mt: 20, ml: 2 }}>
             <Stack sx={{ display: "flex", flexDirection: "column" }}>
-              <Box
-                sx={{
-                  mt: 3,
-                  width: "70px",
-                  borderRadius: "10px",
-                  border: "1px solid black",
-                }}
-                component="img"
-                src={item2}
-              />
-              <Box
-                sx={{
-                  mt: 3,
-                  width: "70px",
-                  borderRadius: "10px",
-                  border: "1px solid black",
-                }}
-                component="img"
-                src={item2}
-              />
-              <Box
-                sx={{
-                  mt: 3,
-                  width: "70px",
-                  borderRadius: "10px",
-                  border: "1px solid black",
-                }}
-                component="img"
-                src={item2}
-              />
-              <Box
-                sx={{
-                  mt: 3,
-                  width: "70px",
-                  borderRadius: "10px",
-                  border: "1px solid black",
-                }}
-                component="img"
-                src={item2}
-              />
+              {images.map((item, index) => (
+                <Box
+                  onClick={() => setSlideIndex(index)}
+                  key={index}
+                  sx={{
+                    mt: 3,
+                    cursor: "pointer",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "70px",
+                      borderRadius: "10px",
+                      border: "1px solid Black",
+                      padding: "10px",
+                    }}
+                    src={item}
+                    alt={`Slide ${index}`}
+                  />
+                </Box>
+              ))}
             </Stack>
             <Box
               sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
               component="img"
-              src={item2}
+              src={images[slideIndex]}
             />
           </Stack>
           <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
@@ -247,7 +235,7 @@ function ProductDetails() {
                 <CalendarMonthIcon fontSize="small" />
               </IconButton>
               <Typography sx={{ fontSize: "12px", mt: 1 }}>
-                Special PriceGet extra ₹598 off (price inclusive of discount)
+                No cost EMI ₹1,368/month. Standard EMI also available
               </Typography>
             </Stack>
             <Stack direction="row" spacing={20}>
