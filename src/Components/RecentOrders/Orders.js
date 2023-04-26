@@ -335,9 +335,9 @@ function Orders() {
                   Add Orders
                 </Button>
                 <TablePagination
-                  sx={{
-                    ".css-16c50h-MuiInputBase-root-MuiTablePagination-select": {
-                      display: "none",
+                  SelectProps={{
+                    sx: {
+                      display: 'none',
                     },
                   }}
                   component="div"
@@ -346,7 +346,6 @@ function Orders() {
                   rowsPerPage={rowsPerPage}
                   onPageChange={handleChangePage}
                   onChangeRowsPerPage={handleChangeRowsPerPage}
-                  // labelDisplayedRows={() => ''}
                   labelRowsPerPage={() => ""}
                 />
               </Box>

@@ -36,7 +36,6 @@ function ProductDetails() {
         mt: 10,
         ml: 3,
         borderRadius: "14px",
-        height: "2000px",
       }}
     >
       <Stack
@@ -108,7 +107,55 @@ function ProductDetails() {
             flexDirection: "column",
           }}
         >
-          <Box sx={{ mt: 3, width: "300px" }} component="img" src={item2} />
+          <Stack direction="row" sx={{ mt: 10, ml: 2 }}>
+            <Stack sx={{ display: "flex", flexDirection: "column" }}>
+              <Box
+                sx={{
+                  mt: 3,
+                  width: "70px",
+                  borderRadius: "10px",
+                  border: "1px solid black",
+                }}
+                component="img"
+                src={item2}
+              />
+              <Box
+                sx={{
+                  mt: 3,
+                  width: "70px",
+                  borderRadius: "10px",
+                  border: "1px solid black",
+                }}
+                component="img"
+                src={item2}
+              />
+              <Box
+                sx={{
+                  mt: 3,
+                  width: "70px",
+                  borderRadius: "10px",
+                  border: "1px solid black",
+                }}
+                component="img"
+                src={item2}
+              />
+              <Box
+                sx={{
+                  mt: 3,
+                  width: "70px",
+                  borderRadius: "10px",
+                  border: "1px solid black",
+                }}
+                component="img"
+                src={item2}
+              />
+            </Stack>
+            <Box
+              sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
+              component="img"
+              src={item2}
+            />
+          </Stack>
           <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
             <Button
               sx={{
@@ -317,84 +364,88 @@ function ProductDetails() {
             <Typography sx={{ fontWeight: "bold", fontSize: "15px", mt: 2 }}>
               Reviews
             </Typography>
-            <Box sx={{ mt: 4, position: "relative" }}>
-              <CircularProgress
-                thickness={4}
-                size={180}
-                variant="determinate"
-                value={75}
-                sx={{ color: "green", strokeWidth: 4 }}
-              />
-              <Box sx={{ position: "absolute", top: 40, left: 40 }}>
-                <Typography sx={{ mt: 1, textAlign: "center" }}>
-                  4.8
-                  <IconButton sx={{ color: "black", mb: 1 }}>
-                    <StarIcon />
-                  </IconButton>
-                </Typography>
-                <Typography>Overall Rating</Typography>
+            <Stack direction="row">
+              <Box sx={{ mt: 4, position: "relative" }}>
+                <CircularProgress
+                  thickness={4}
+                  size={180}
+                  variant="determinate"
+                  value={75}
+                  sx={{ color: "green", strokeWidth: 4 }}
+                />
+                <Box sx={{ position: "absolute", top: 40, left: 40 }}>
+                  <Typography sx={{ mt: 1, textAlign: "center" }}>
+                    4.8
+                    <IconButton sx={{ color: "black", mb: 1 }}>
+                      <StarIcon />
+                    </IconButton>
+                  </Typography>
+                  <Typography>Overall Rating</Typography>
+                </Box>
               </Box>
-            </Box>
-            <Typography sx={{ margin: 0 }}>
-              5
-              <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
-                <StarIcon fontSize="small" />
-              </IconButton>
-              <LinearProgress
-                variant="determinate"
-                value={35}
-                color="secondary"
-                sx={{ width: "200px" }}
-              />
-            </Typography>
-            <Typography sx={{ margin: 0 }}>
-              4
-              <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
-                <StarIcon fontSize="small" />
-              </IconButton>
-              <LinearProgress
-                variant="determinate"
-                value={35}
-                color="secondary"
-                sx={{ width: "200px" }}
-              />
-            </Typography>
-            <Typography sx={{ margin: 0 }}>
-              3
-              <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
-                <StarIcon fontSize="small" />
-              </IconButton>
-              <LinearProgress
-                variant="determinate"
-                value={35}
-                color="secondary"
-                sx={{ width: "200px" }}
-              />
-            </Typography>
-            <Typography sx={{ margin: 0 }}>
-              2
-              <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
-                <StarIcon fontSize="small" />
-              </IconButton>
-              <LinearProgress
-                variant="determinate"
-                value={35}
-                color="secondary"
-                sx={{ width: "200px" }}
-              />
-            </Typography>
-            <Typography sx={{ margin: 0 }}>
-              1
-              <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
-                <StarIcon fontSize="small" />
-              </IconButton>
-              <LinearProgress
-                variant="determinate"
-                value={35}
-                color="secondary"
-                sx={{ width: "200px" }}
-              />
-            </Typography>
+              <Stack sx={{ mt: 4, ml: 4 }}>
+                <Typography sx={{ margin: 0 }}>
+                  5
+                  <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
+                    <StarIcon fontSize="small" />
+                  </IconButton>
+                  <LinearProgress
+                    variant="determinate"
+                    value={35}
+                    color="secondary"
+                    sx={{ width: "200px" }}
+                  />
+                </Typography>
+                <Typography sx={{ margin: 0 }}>
+                  4
+                  <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
+                    <StarIcon fontSize="small" />
+                  </IconButton>
+                  <LinearProgress
+                    variant="determinate"
+                    value={35}
+                    color="secondary"
+                    sx={{ width: "200px" }}
+                  />
+                </Typography>
+                <Typography sx={{ margin: 0 }}>
+                  3
+                  <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
+                    <StarIcon fontSize="small" />
+                  </IconButton>
+                  <LinearProgress
+                    variant="determinate"
+                    value={35}
+                    color="secondary"
+                    sx={{ width: "200px" }}
+                  />
+                </Typography>
+                <Typography sx={{ margin: 0 }}>
+                  2
+                  <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
+                    <StarIcon fontSize="small" />
+                  </IconButton>
+                  <LinearProgress
+                    variant="determinate"
+                    value={35}
+                    color="secondary"
+                    sx={{ width: "200px" }}
+                  />
+                </Typography>
+                <Typography sx={{ margin: 0 }}>
+                  1
+                  <IconButton sx={{ color: "black", mb: 0.5, padding: 0 }}>
+                    <StarIcon fontSize="small" />
+                  </IconButton>
+                  <LinearProgress
+                    variant="determinate"
+                    value={35}
+                    color="secondary"
+                    sx={{ width: "200px" }}
+                  />
+                </Typography>
+              </Stack>
+            </Stack>
           </Stack>
         </Box>
       </Stack>

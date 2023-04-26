@@ -177,8 +177,8 @@ function Products() {
               <ViewCompactIcon fontSize="medium" />
             </IconButton>
             <TablePagination
-              sx={{
-                ".css-16c50h-MuiInputBase-root-MuiTablePagination-select": {
+              SelectProps={{
+                sx: {
                   display: "none",
                 },
               }}
@@ -216,11 +216,15 @@ function Products() {
                 <Grid item xs={6} key={item}>
                   <Card
                     sx={{
-                      margin: "13px",
+                      ml:3,
+                      marginTop: "8px",
+                      marginBottom: "20px",
+                      display: "flex",
+                      justifyContent: "space-between",
                       borderRadius: "40px",
-                      paddingTop: "10px",
-                      width: "450px",
-                      height: "420px",
+                      maxWidth: "450px",
+                      height:"100%",
+                      padding: "10px",
                       boxShadow:
                         "3px 3px 5px rgb(0 0 0 / 25%), -3px -3Fpx 5px rgb(255 255 255 / 6%)",
                     }}
@@ -229,8 +233,9 @@ function Products() {
                       <CardMedia
                         component="img"
                         sx={{
-                          maxWidth: 250,
-                          height: 200,
+                          objectFit: "cover",
+                          objectPosition: "center",
+                          width: "45%",
                           ml: 12,
                           mt: 5,
                         }}
