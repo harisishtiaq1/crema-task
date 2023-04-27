@@ -65,7 +65,7 @@ function Cart() {
           </Typography>
         </Box>
 
-        <Grid container>
+        <Grid container sx={{mt:2}}>
           <Grid item xs={12} sm={9} md={8}>
             <Paper
               sx={{
