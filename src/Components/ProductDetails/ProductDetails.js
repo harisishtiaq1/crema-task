@@ -7,6 +7,7 @@ import {
   LinearProgress,
   Paper,
   Rating,
+  Slide,
   Stack,
   TextField,
   Tooltip,
@@ -32,6 +33,12 @@ import { useNavigate } from "react-router-dom";
 const images = [Laptop, Camera, HeadPhones, Mobile];
 function ProductDetails() {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
+
   const nevigate = useNavigate();
   const cart = () => {
     let path = "/cart";
@@ -126,6 +133,8 @@ function ProductDetails() {
                   }}
                 >
                   <img
+                    checked={checked}
+                    onClick={handleChange}
                     style={{
                       width: "70px",
                       borderRadius: "10px",
@@ -138,11 +147,13 @@ function ProductDetails() {
                 </Box>
               ))}
             </Stack>
-            <Box
-              sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
-              component="img"
-              src={images[slideIndex]}
-            />
+            <Slide direction="left" in={checked}>
+              <Box
+                sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
+                component="img"
+                src={images[slideIndex]}
+              />
+            </Slide>
           </Stack>
           <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
             <Button
@@ -245,7 +256,11 @@ function ProductDetails() {
                 </Typography>
                 <TextField
                   InputProps={{
-                    style: { borderRadius: "4px", height: "40px" },
+                    style: {
+                      borderRadius: "4px",
+                      height: "50px",
+                      padding: "10px",
+                    },
                   }}
                   label="Pin Code"
                 />
