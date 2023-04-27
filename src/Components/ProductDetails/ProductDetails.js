@@ -147,13 +147,12 @@ function ProductDetails() {
                 </Box>
               ))}
             </Stack>
-            <Slide direction="left" in={checked}>
-              <Box
-                sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
-                component="img"
-                src={images[slideIndex]}
-              />
-            </Slide>
+
+            <Box
+              sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
+              component="img"
+              src={images[slideIndex]}
+            />
           </Stack>
           <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
             <Button
