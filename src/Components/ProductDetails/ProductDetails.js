@@ -7,7 +7,6 @@ import {
   LinearProgress,
   Paper,
   Rating,
-  Slide,
   Stack,
   TextField,
   Tooltip,
@@ -30,19 +29,52 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CachedIcon from "@mui/icons-material/Cached";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const images = [Laptop, Camera, HeadPhones, Mobile];
 function ProductDetails() {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [checked, setChecked] = React.useState(false);
-
-  const handleChange = () => {
-    setChecked((prev) => !prev);
-  };
 
   const nevigate = useNavigate();
   const cart = () => {
     let path = "/cart";
     nevigate(path);
+  };
+  const slide = React.useRef(null);
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <Paper
@@ -133,8 +165,6 @@ function ProductDetails() {
                   }}
                 >
                   <img
-                    checked={checked}
-                    onClick={handleChange}
                     style={{
                       width: "70px",
                       borderRadius: "10px",
@@ -147,13 +177,13 @@ function ProductDetails() {
                 </Box>
               ))}
             </Stack>
-            <Slide direction="left" in={checked}>
+            <Slider ref={slide} {...settings}>
               <Box
                 sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
                 component="img"
                 src={images[slideIndex]}
               />
-            </Slide>
+            </Slider>
           </Stack>
           <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
             <Button
