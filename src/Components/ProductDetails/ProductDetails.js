@@ -13,8 +13,6 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Laptop from "../../Assets/item-2.png";
 import Camera from "../../Assets/item-4.png";
 import HeadPhones from "../../Assets/item-3.png";
@@ -40,7 +38,7 @@ function ProductDetails() {
   return (
     <Paper
       sx={{
-        mt: 10,
+        mt: 12,
         ml: 3,
         borderRadius: "14px",
       }}
@@ -266,7 +264,7 @@ function ProductDetails() {
                   Services
                 </Typography>
                 <Stack direction="row">
-                  <Tooltip title="return policy">
+                  <Tooltip title="Return policy">
                     <IconButton sx={{ mt: 1, color: "rgb(10, 143, 220)" }}>
                       <CachedIcon fontSize="small" />
                     </IconButton>

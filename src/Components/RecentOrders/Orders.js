@@ -287,7 +287,7 @@ function Orders() {
               Recent Orders
             </Typography>
           </Box>
-          <Box position="static">
+          <Box position="static" sx={{mt:2}}>
             <Paper
               sx={{
                 paddingTop: "7px",
@@ -402,7 +402,7 @@ function Orders() {
                       <TableCell>{row.delivery}</TableCell>
                       <TableCell>{row.price}</TableCell>
                       <TableCell>{row.payment}</TableCell>
-                      <TableCell>
+                      <TableCell align="left">
                         <Box
                           sx={{
                             color: row.color,
