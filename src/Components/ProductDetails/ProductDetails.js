@@ -7,7 +7,6 @@ import {
   LinearProgress,
   Paper,
   Rating,
-  Slide,
   Stack,
   TextField,
   Tooltip,
@@ -33,12 +32,11 @@ import { useNavigate } from "react-router-dom";
 const images = [Laptop, Camera, HeadPhones, Mobile];
 function ProductDetails() {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [checked, setChecked] = React.useState(images[0]);
+  const [selectedImage, setSelectedImage] = useState(images[0]);
 
-  const handleChange = () => {
-    setChecked((prev) => !prev);
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
   };
-
   const nevigate = useNavigate();
   const cart = () => {
     let path = "/cart";
@@ -133,8 +131,6 @@ function ProductDetails() {
                   }}
                 >
                   <img
-                    checked={checked}
-                    onClick={handleChange}
                     style={{
                       width: "70px",
                       borderRadius: "10px",
