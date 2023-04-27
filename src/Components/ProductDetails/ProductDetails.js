@@ -13,8 +13,6 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Laptop from "../../Assets/item-2.png";
 import Camera from "../../Assets/item-4.png";
 import HeadPhones from "../../Assets/item-3.png";
@@ -29,10 +27,11 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CachedIcon from "@mui/icons-material/Cached";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import { useNavigate } from "react-router-dom";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 const images = [Laptop, Camera, HeadPhones, Mobile];
+
+
+
+
 function ProductDetails() {
   const [slideIndex, setSlideIndex] = useState(0);
 
@@ -40,41 +39,6 @@ function ProductDetails() {
   const cart = () => {
     let path = "/cart";
     nevigate(path);
-  };
-  const slide = React.useRef(null);
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
   return (
     <Paper
@@ -177,13 +141,12 @@ function ProductDetails() {
                 </Box>
               ))}
             </Stack>
-            <Slider ref={slide} {...settings}>
-              <Box
-                sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
-                component="img"
-                src={images[slideIndex]}
-              />
-            </Slider>
+
+            <Box
+              sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
+              component="img"
+              src={images[slideIndex]}
+            />
           </Stack>
           <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
             <Button
