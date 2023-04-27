@@ -49,7 +49,7 @@ function Filters() {
             Products
           </Typography>
         </Box>
-        <Grid container sx={{mt:2}}>
+        <Grid container sx={{ mt: 2 }}>
           <Grid item sm={3} sx={{ display: { xs: "none", sm: "block" } }}>
             <Scrollbars
               style={{ width: 300, height: 500 }}

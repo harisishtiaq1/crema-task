@@ -194,7 +194,7 @@ function Cart() {
                     lineHeight: 1.75,
                     minWidth: "64px",
                     padding: "6px 16px",
-                    '&:hover': {
+                    "&:hover": {
                       backgroundColor: "rgb(240, 79, 71)",
                     },
                   }}

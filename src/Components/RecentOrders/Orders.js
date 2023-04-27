@@ -287,7 +287,7 @@ function Orders() {
               Recent Orders
             </Typography>
           </Box>
-          <Box position="static" sx={{mt:2}}>
+          <Box position="static" sx={{ mt: 2 }}>
             <Paper
               sx={{
                 paddingTop: "7px",
