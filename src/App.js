@@ -13,15 +13,14 @@ function App() {
     typography: {
       fontFamily: "Poppins, sans-serif",
     },
-    body: {
-      backgroundColor: "F4F7FE",
-    },
+    backgroundColor: "#F4F7FE",
   });
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <Box
           sx={{
+            backgroundColor: "#F4F7FE",
             height: "90vh",
           }}
         >
