@@ -7,12 +7,15 @@ import {
   LinearProgress,
   Paper,
   Rating,
+  Slide,
   Stack,
   TextField,
   Tooltip,
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Laptop from "../../Assets/item-2.png";
 import Camera from "../../Assets/item-4.png";
 import HeadPhones from "../../Assets/item-3.png";
@@ -28,12 +31,13 @@ import CachedIcon from "@mui/icons-material/Cached";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import { useNavigate } from "react-router-dom";
 const images = [Laptop, Camera, HeadPhones, Mobile];
-
-
-
-
 function ProductDetails() {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [checked, setChecked] = React.useState(images[0]);
+
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
 
   const nevigate = useNavigate();
   const cart = () => {
@@ -129,6 +133,8 @@ function ProductDetails() {
                   }}
                 >
                   <img
+                    checked={checked}
+                    onClick={handleChange}
                     style={{
                       width: "70px",
                       borderRadius: "10px",
@@ -141,12 +147,13 @@ function ProductDetails() {
                 </Box>
               ))}
             </Stack>
-
-            <Box
-              sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
-              component="img"
-              src={images[slideIndex]}
-            />
+            <Slide direction="left" in={checked}>
+              <Box
+                sx={{ mt: 3, ml: 2, width: "300px", height: "300px" }}
+                component="img"
+                src={images[slideIndex]}
+              />
+            </Slide>
           </Stack>
           <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
             <Button
