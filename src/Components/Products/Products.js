@@ -216,14 +216,14 @@ function Products() {
                 <Grid item xs={6} key={item}>
                   <Card
                     sx={{
-                      ml:3,
+                      ml: 3,
                       marginTop: "8px",
                       marginBottom: "20px",
                       display: "flex",
                       justifyContent: "space-between",
                       borderRadius: "40px",
                       maxWidth: "450px",
-                      height:"100%",
+                      height: "100%",
                       padding: "10px",
                       boxShadow:
                         "3px 3px 5px rgb(0 0 0 / 25%), -3px -3Fpx 5px rgb(255 255 255 / 6%)",

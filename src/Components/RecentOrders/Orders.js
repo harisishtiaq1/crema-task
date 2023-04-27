@@ -337,7 +337,7 @@ function Orders() {
                 <TablePagination
                   SelectProps={{
                     sx: {
-                      display: 'none',
+                      display: "none",
                     },
                   }}
                   component="div"
