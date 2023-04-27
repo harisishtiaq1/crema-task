@@ -32,11 +32,6 @@ import { useNavigate } from "react-router-dom";
 const images = [Laptop, Camera, HeadPhones, Mobile];
 function ProductDetails() {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(images[0]);
-
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
-  };
   const nevigate = useNavigate();
   const cart = () => {
     let path = "/cart";
