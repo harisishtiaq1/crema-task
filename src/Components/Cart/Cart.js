@@ -154,7 +154,7 @@ function Cart() {
                               sx={{ mt: 1, ml: 1 }}
                             >
                               <AddIcon
-                                onClick={(index)=>handleAddClick(index)}
+                                onClick={(index) => handleAddClick(index)}
                                 fontSize="small"
                               />
 
@@ -169,11 +169,8 @@ function Cart() {
                           </Box>
                         </TableCell>
                         <TableCell>
-                          <Typography>
-
-                          {`$${result}`}
-                          </Typography>
-                          </TableCell>
+                          <Typography>{`$${result}`}</Typography>
+                        </TableCell>
                         <TableCell>
                           <IconButton
                             onClick={() => handleDelete(row.id)}

@@ -410,6 +410,7 @@ function Orders() {
                             backgroundColor: row.bgColor,
                             padding: "5px 5px",
                             display: "inline-block",
+                            width: "100px",
                           }}
                         >
                           {row.status}

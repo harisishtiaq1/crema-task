@@ -99,24 +99,24 @@ function Filters() {
                       <ArrowForwardIosIcon sx={{ fontSize: "12px" }} />
                     )}
                     <ListItemText
-                      sx={{ fontSize: "6px", ml: 3, color: "black" }}
+                      sx={{ fontSize: "2px", ml: 3, color: "grey" }}
                       primary="Watches"
                     />
                   </ListItemButton>
                   <Collapse in={open} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
                       <ListItemButton
-                        sx={{ pl: 4, width: "200px", ml: 6, color: "black" }}
+                        sx={{ pl: 4, width: "200px", ml: 6, color: "grey" }}
                       >
                         <ListItemText primary="Mens Watches" />
                       </ListItemButton>
                       <ListItemButton
-                        sx={{ pl: 4, width: "200px", ml: 6, color: "black" }}
+                        sx={{ pl: 4, width: "200px", ml: 6, color: "grey" }}
                       >
                         <ListItemText primary="Women Watches" />
                       </ListItemButton>
                       <ListItemButton
-                        sx={{ pl: 4, width: "200px", ml: 6, color: "black" }}
+                        sx={{ pl: 4, width: "200px", ml: 6, color: "grey" }}
                       >
                         <ListItemText primary="Kids Watches" />
                       </ListItemButton>
