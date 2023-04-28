@@ -1,13 +1,10 @@
 import {
   Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
   Grid,
   IconButton,
   InputBase,
   Paper,
+  Stack,
   TablePagination,
   Typography,
 } from "@mui/material";
@@ -214,7 +211,7 @@ function Products() {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((item) => (
                 <Grid item xs={6} key={item}>
-                  <Card
+                  <Paper
                     sx={{
                       ml: 3,
                       marginTop: "8px",
@@ -222,52 +219,47 @@ function Products() {
                       display: "flex",
                       justifyContent: "space-between",
                       borderRadius: "40px",
-                      maxWidth: "450px",
-                      height: "100%",
-                      padding: "10px",
+                      maxWidth: "700px",
+                      padding: "15px",
                       boxShadow:
                         "3px 3px 5px rgb(0 0 0 / 25%), -3px -3Fpx 5px rgb(255 255 255 / 6%)",
                     }}
                   >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        sx={{
-                          objectFit: "cover",
-                          objectPosition: "center",
-                          width: "45%",
-                          ml: 12,
-                          mt: 5,
-                        }}
-                        image={item.src}
-                        alt="green iguana"
+                    <Stack direction="column">
+                      <Box
                         onClick={() => details()}
-                      />
-                      <CardContent>
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          textAlign: "center",
+                          maxWidth: "50%",
+                          height: "auto",
+                          ml: 15,
+                          mb: 5,
+                        }}
+                      >
+                        <img
+                          style={{ maxWidth: "300px", height: "200px" }}
+                          src={item.src}
+                          alt="green iguana"
+                        />
+                      </Box>
+                      <Box>
                         <Typography
-                          gutterBottom
-                          variant="h6"
-                          component="h6"
-                          sx={{ fontWeight: "bold", fontSize: "17px" }}
+                          variant="h3"
+                          component="h3"
+                          sx={{
+                            fontSize: "16px",
+                            margin: "0px 0px 4px",
+                            fontWeight: "500",
+                          }}
                         >
                           {item.text}
                         </Typography>
-                        <Typography
-                          gutterBottom
-                          variant="p"
-                          component="h6"
-                          sx={{
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            fontSize: "15px",
-                            color: "grey",
-                          }}
-                        >
-                          {item.desc}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
+                      </Box>
+                    </Stack>
+                  </Paper>
                 </Grid>
               ))}
           </Grid>

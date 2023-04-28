@@ -242,7 +242,7 @@ function Cart() {
             </Paper>
           </Grid>
           <Grid item xs={12} sm={3} md={4}>
-            <OrderSummary />
+            <OrderSummary  />
           </Grid>
         </Grid>
       </Stack>

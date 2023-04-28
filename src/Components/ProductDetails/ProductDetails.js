@@ -364,7 +364,7 @@ function ProductDetails() {
                   value={75}
                   sx={{ color: "green", strokeWidth: 4 }}
                 />
-                <Box sx={{ position: "absolute", top: 40, left: 40 }}>
+                <Box sx={{ position: "absolute", top: 40, left: 35 }}>
                   <Typography sx={{ mt: 1, textAlign: "center" }}>
                     4.8
                     <IconButton sx={{ color: "black", mb: 1 }}>

@@ -1,13 +1,13 @@
 import {
   Box,
   Button,
-  Collapse,
   IconButton,
   InputBase,
   List,
   ListItem,
   ListItemText,
   Paper,
+  Popover,
   Stack,
   Table,
   TableBody,
@@ -277,7 +277,18 @@ function Orders() {
     setRowsPerPage(parseInt(event.target.value, 12));
     setPage(0);
   };
-  const [showPaper, setShowPaper] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event, item) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
   return (
     <>
       <Box sx={{ mt: 8, ml: 3 }}>
@@ -420,7 +431,7 @@ function Orders() {
                         <TableCell>
                           <IconButton
                             sx={{ backgroundColor: "none" }}
-                            onClick={() => setShowPaper(!showPaper)}
+                            onClick={(event) => handleClick(event, row)}
                           >
                             <MoreVertIcon />
                           </IconButton>
@@ -433,16 +444,22 @@ function Orders() {
           </TableContainer>
         </Scrollbars>
       </Box>
-      <Collapse in={showPaper}>
-        <Paper
-          sx={{
-            position: "absolute",
-            minWidth: "16px",
-            minHeight: "16px",
-            bottom: 284,
-            left: 1170,
-          }}
-        >
+
+      <Popover
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+      >
+        <Stack sx={{ p: 2 }}>
           <List>
             <ListItem>
               <Stack direction="column">
@@ -452,8 +469,8 @@ function Orders() {
               </Stack>
             </ListItem>
           </List>
-        </Paper>
-      </Collapse>
+        </Stack>
+      </Popover>
     </>
   );
 }
