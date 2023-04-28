@@ -22,31 +22,51 @@ import item3 from "../../Assets/item-3.png";
 import React from "react";
 import OrderSummary from "./OrderSummary";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-const rows = [
-  {
-    img: item1,
-    name: "Mens's Exclusive Watch",
-    desc: "Brand: FastTrack",
-    unitPrice: "$95",
-    totalPrice: "$95",
-  },
-  {
-    img: item2,
-    name: "HP Pavilion Gaming Ryzen 7 Octa Core 4800H",
-    desc: "Brand: FastTrack",
-    unitPrice: "$1230",
-    totalPrice: "$1230",
-  },
-  {
-    img: item3,
-    name: "NIKON Z6 II Body Mirrorless Camera with 64GB SD Card",
-    desc: "Brand: FastTrack",
-    unitPrice: "$1169",
-    totalPrice: "$1169",
-  },
-];
 function Cart() {
+  const [number, setNumber] = useState(1);
+  const [result, setResult] = useState(95);
+
+  function handleAddClick() {
+    const newNumber = number + 1;
+    setNumber(newNumber);
+    setResult(95 * newNumber);
+  }
+
+  function handleSubtractClick() {
+    const newNumber = number - 1;
+    if (number > 0) {
+      setNumber(newNumber);
+      setResult(result - 95);
+    }
+  }
+  const [rows, setRows] = useState([
+    {
+      id: 0,
+      img: item1,
+      name: "Mens's Exclusive Watch",
+      desc: "Brand: FastTrack",
+      unitPrice: "$95",
+      totalPrice: "$95",
+    },
+    {
+      id: 1,
+      img: item2,
+      name: "HP Pavilion Gaming Ryzen 7 Octa Core 4800H",
+      desc: "Brand: FastTrack",
+      unitPrice: "$1230",
+      totalPrice: "$1230",
+    },
+    {
+      id: 2,
+      img: item3,
+      name: "NIKON Z6 II Body Mirrorless Camera with 64GB SD Card",
+      desc: "Brand: FastTrack",
+      unitPrice: "$1169",
+      totalPrice: "$1169",
+    },
+  ]);
   const nevigate = useNavigate();
   const products = () => {
     let path = "/products";
@@ -56,6 +76,10 @@ function Cart() {
     let path = "/checkout";
     nevigate(path);
   };
+  function handleDelete(id) {
+    const newArray = rows.filter((item) => item.id !== id);
+    setRows(newArray);
+  }
   return (
     <Box sx={{ mt: 8, ml: 3 }}>
       <Stack sx={{ mt: 4 }}>
@@ -65,7 +89,7 @@ function Cart() {
           </Typography>
         </Box>
 
-        <Grid container sx={{mt:2}}>
+        <Grid container sx={{ mt: 2 }}>
           <Grid item xs={12} sm={9} md={8}>
             <Paper
               sx={{
@@ -129,22 +153,38 @@ function Cart() {
                               spacing={2}
                               sx={{ mt: 1, ml: 1 }}
                             >
-                              <AddIcon fontSize="small" />
+                              <AddIcon
+                                onClick={(index)=>handleAddClick(index)}
+                                fontSize="small"
+                              />
+
                               <Typography sx={{ fontSize: "15px" }}>
-                                1
+                                {number}
                               </Typography>
-                              <RemoveIcon fontSize="small" />
+                              <RemoveIcon
+                                onClick={handleSubtractClick}
+                                fontSize="small"
+                              />
                             </Stack>
                           </Box>
                         </TableCell>
-                        <TableCell>{row.totalPrice}</TableCell>
+                        <TableCell>
+                          <Typography>
+
+                          {`$${result}`}
+                          </Typography>
+                          </TableCell>
                         <TableCell>
                           <IconButton
+                            onClick={() => handleDelete(row.id)}
                             sx={{
                               backgroundColor: "black",
                               color: "white",
                               width: "25px",
                               height: "25px",
+                              "&:hover": {
+                                backgroundColor: "black",
+                              },
                             }}
                           >
                             <CloseIcon fontSize="small" />

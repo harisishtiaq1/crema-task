@@ -147,7 +147,7 @@ function Filters() {
                   <Slider
                     value={value}
                     onChange={handleChange}
-                    valueLabelDisplay="auto"
+                    valueLabelDisplay="off"
                     min={0}
                     max={500}
                   />
@@ -260,6 +260,7 @@ function Filters() {
                       borderRadius: "400px",
                       height: "40px",
                       width: "40px",
+                      cursor: "pointer",
                     }}
                   ></Box>
                   <Box
@@ -267,6 +268,7 @@ function Filters() {
                       backgroundColor: "rgb(135, 129, 189)",
                       borderRadius: "400px",
                       height: "40px",
+                      cursor: "pointer",
                       width: "40px",
                     }}
                   ></Box>
@@ -275,6 +277,7 @@ function Filters() {
                       backgroundColor: "rgb(163, 211, 156)",
                       borderRadius: "400px",
                       height: "40px",
+                      cursor: "pointer",
                       width: "40px",
                     }}
                   ></Box>
@@ -283,6 +286,7 @@ function Filters() {
                       backgroundColor: "rgb(245, 152, 157)",
                       borderRadius: "400px",
                       height: "40px",
+                      cursor: "pointer",
                       width: "40px",
                     }}
                   ></Box>
@@ -291,6 +295,7 @@ function Filters() {
                       backgroundColor: "rgb(246, 150, 121)",
                       borderRadius: "400px",
                       height: "40px",
+                      cursor: "pointer",
                       width: "40px",
                     }}
                   ></Box>
