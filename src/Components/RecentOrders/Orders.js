@@ -428,9 +428,9 @@ function Orders() {
                         </Box>
                       </TableCell>
                       <TableCell>
-                        <TableCell>
+                        <TableCell sx={{border:'none'}}>
                           <IconButton
-                            sx={{ backgroundColor: "none" }}
+                            sx={{ border:"none" }}
                             onClick={(event) => handleClick(event, row)}
                           >
                             <MoreVertIcon />
@@ -444,7 +444,6 @@ function Orders() {
           </TableContainer>
         </Scrollbars>
       </Box>
-
       <Popover
         id={id}
         open={open}

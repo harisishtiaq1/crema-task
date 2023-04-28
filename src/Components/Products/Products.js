@@ -213,6 +213,7 @@ function Products() {
                 <Grid item xs={6} key={item}>
                   <Paper
                     sx={{
+                      cursor:"pointer",
                       ml: 3,
                       marginTop: "8px",
                       marginBottom: "20px",
@@ -223,11 +224,11 @@ function Products() {
                       padding: "15px",
                       boxShadow:
                         "3px 3px 5px rgb(0 0 0 / 25%), -3px -3Fpx 5px rgb(255 255 255 / 6%)",
-                    }}
+                      }}
+                      onClick={() => details()}
                   >
                     <Stack direction="column">
                       <Box
-                        onClick={() => details()}
                         sx={{
                           display: "flex",
                           alignItems: "center",
@@ -245,7 +246,7 @@ function Products() {
                           alt="green iguana"
                         />
                       </Box>
-                      <Box>
+                      <Box sx={{textAlign:'center',display:'flex',alignItems:'center',justifyContent:'center'}}>
                         <Typography
                           variant="h3"
                           component="h3"
