@@ -115,7 +115,7 @@ function Cart() {
                     </TableRow>
                   </TableHead>
                   <TableBody sx={{ height: "30px" }}>
-                    {rows.map((row) => (
+                    {rows.map((row, index) => (
                       <TableRow key={row.name}>
                         <TableCell>
                           <Stack direction="row">
@@ -154,7 +154,7 @@ function Cart() {
                               sx={{ mt: 1, ml: 1 }}
                             >
                               <AddIcon
-                                onClick={(index) => handleAddClick(index)}
+                                onClick={() => handleAddClick(row.id)}
                                 fontSize="small"
                               />
 
@@ -162,7 +162,7 @@ function Cart() {
                                 {number}
                               </Typography>
                               <RemoveIcon
-                                onClick={handleSubtractClick}
+                                onClick={() => handleSubtractClick(row.id)}
                                 fontSize="small"
                               />
                             </Stack>
@@ -242,7 +242,7 @@ function Cart() {
             </Paper>
           </Grid>
           <Grid item xs={12} sm={3} md={4}>
-            <OrderSummary  />
+            <OrderSummary />
           </Grid>
         </Grid>
       </Stack>
