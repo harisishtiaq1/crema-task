@@ -33,7 +33,7 @@ function Cart() {
     console.log("row index");
     console.log("row index");
     console.log("row index");
-    row[index].unitPrice = row.unitPrice *number ;
+    row[index].unitPrice = row.unitPrice * number;
     console.log(row, index);
     const newNumber = number + 1;
     setNumber(newNumber);
