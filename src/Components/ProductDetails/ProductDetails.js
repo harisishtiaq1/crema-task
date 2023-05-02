@@ -45,6 +45,7 @@ function ProductDetails() {
         autoClose: 3000,
         toastClassName: "my-toast",
         bodyClassName: "my-toast-body",
+        whiteSpace: "nowrap"
       }
     );
   };

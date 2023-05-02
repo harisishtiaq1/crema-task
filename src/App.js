@@ -34,7 +34,7 @@ function App() {
                 fontWeight: "500",
                 padding: "6px",
                 fontSize: "15px",
-                backgroundColor: "green",
+                backgroundColor: "#43A047",
                 color: "white",
               },
             }}

@@ -98,27 +98,40 @@ function Filters() {
                     ) : (
                       <ArrowForwardIosIcon sx={{ fontSize: "12px" }} />
                     )}
-                    <ListItemText
-                      sx={{ fontSize: "2px", ml: 3, color: "grey" }}
-                      primary="Watches"
-                    />
+                    <ListItemText>
+                      <Typography sx={{ fontSize: "16px", color: "grey" }}>
+                        Watches
+                      </Typography>
+                    </ListItemText>
                   </ListItemButton>
                   <Collapse in={open} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
                       <ListItemButton
-                        sx={{ pl: 4, width: "200px", ml: 6, color: "grey" }}
+                        sx={{ pl: 4, width: "200px", ml: 5, color: "grey" }}
                       >
-                        <ListItemText primary="Mens Watches" />
+                        <ListItemText>
+                          <Typography sx={{ fontSize: "14px" }}>
+                            Mens Watches
+                          </Typography>
+                        </ListItemText>
                       </ListItemButton>
                       <ListItemButton
-                        sx={{ pl: 4, width: "200px", ml: 6, color: "grey" }}
+                        sx={{ pl: 4, width: "200px", ml: 5, color: "grey" }}
                       >
-                        <ListItemText primary="Women Watches" />
+                        <ListItemText>
+                          <Typography sx={{ fontSize: "14px" }}>
+                            Women Watches
+                          </Typography>
+                        </ListItemText>
                       </ListItemButton>
                       <ListItemButton
-                        sx={{ pl: 4, width: "200px", ml: 6, color: "grey" }}
+                        sx={{ pl: 4, width: "200px", ml: 5, color: "grey" }}
                       >
-                        <ListItemText primary="Kids Watches" />
+                        <ListItemText>
+                          <Typography sx={{ fontSize: "14px" }}>
+                            Kids Watches
+                          </Typography>
+                        </ListItemText>
                       </ListItemButton>
                     </List>
                   </Collapse>
