@@ -45,7 +45,7 @@ function Filters() {
     <Box sx={{ mt: 8, ml: 3 }}>
       <Stack sx={{ mt: 4 }}>
         <Box position="static" sx={{ mt: 4 }}>
-          <Typography sx={{ fontWeight: "bold", fontSize: "17px" }}>
+          <Typography sx={{ fontWeight: "500", fontSize: "17px" }}>
             Products
           </Typography>
         </Box>
@@ -68,7 +68,7 @@ function Filters() {
               >
                 <Typography
                   sx={{
-                    fontWeight: "bold",
+                    fontWeight: "500",
                     fontSize: "15px",
                     ml: 3,
                   }}
@@ -77,7 +77,7 @@ function Filters() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontWeight: "bold",
+                    fontWeight: "500",
                     color: "grey",
                     fontSize: "15px",
                     ml: 3,

@@ -33,11 +33,9 @@ function Cart() {
     console.log("row index");
     console.log("row index");
     console.log("row index");
-    rows[index].unitPrice = rows.unitPrice * number;
+    rows[index].totalPrice = row.unitPrice * row.quantity;
     console.log(row, index);
-    const newNumber = number + 1;
-    setNumber(newNumber);
-    setResult(95 * newNumber);
+    rows[index].quantity = row.quantity + 1;
   }
 
   function handleSubtractClick() {
@@ -53,24 +51,27 @@ function Cart() {
       img: item1,
       name: "Mens's Exclusive Watch",
       desc: "Brand: FastTrack",
-      unitPrice: "$95",
-      totalPrice: "$95",
+      unitPrice: 95,
+      totalPrice: 0,
+      quantity: 1,
     },
     {
       id: 1,
       img: item2,
       name: "HP Pavilion Gaming Ryzen 7 Octa Core 4800H",
       desc: "Brand: FastTrack",
-      unitPrice: "$1230",
-      totalPrice: "$1230",
+      unitPrice: 1230,
+      totalPrice: 0,
+      quantity: 1,
     },
     {
       id: 2,
       img: item3,
       name: "NIKON Z6 II Body Mirrorless Camera with 64GB SD Card",
       desc: "Brand: FastTrack",
-      unitPrice: "$1169",
-      totalPrice: "$1169",
+      unitPrice: 1169,
+      totalPrice: 0,
+      quantity: 1,
     },
   ]);
   const nevigate = useNavigate();
@@ -90,7 +91,7 @@ function Cart() {
     <Box sx={{ mt: 8, ml: 3 }}>
       <Stack sx={{ mt: 4 }}>
         <Box position="static" sx={{ mt: 4 }}>
-          <Typography sx={{ fontWeight: "bold", fontSize: "17px" }}>
+          <Typography sx={{ fontWeight: "500", fontSize: "17px" }}>
             Cart
           </Typography>
         </Box>
@@ -109,20 +110,20 @@ function Cart() {
                 <Table aria-label="simple table">
                   <TableHead sx={{ height: "20px" }}>
                     <TableRow style={{ backgroundColor: "#F4F7FE" }}>
-                      <TableCell sx={{ fontWeight: "bold" }}>Product</TableCell>
-                      <TableCell sx={{ fontWeight: "bold" }}>
+                      <TableCell sx={{ fontWeight: "500" }}>Product</TableCell>
+                      <TableCell sx={{ fontWeight: "500" }}>
                         Unit Price
                       </TableCell>
-                      <TableCell align="center" sx={{ fontWeight: "bold" }}>
+                      <TableCell align="center" sx={{ fontWeight: "500" }}>
                         QTY
                       </TableCell>
-                      <TableCell sx={{ fontWeight: "bold" }}>Total</TableCell>
+                      <TableCell sx={{ fontWeight: "500" }}>Total</TableCell>
                       <TableCell></TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody sx={{ height: "30px" }}>
                     {rows.map((row, index) => (
-                      <TableRow key={index}>
+                      <TableRow key={row.name}>
                         <TableCell>
                           <Stack direction="row">
                             <Box
@@ -142,7 +143,9 @@ function Cart() {
                             </Stack>
                           </Stack>
                         </TableCell>
-                        <TableCell>{row.unitPrice}</TableCell>
+                        <TableCell>
+                          <Typography>{`$${row.unitPrice}`}</Typography>
+                        </TableCell>
                         <TableCell>
                           <Box
                             sx={{
@@ -165,7 +168,7 @@ function Cart() {
                               />
 
                               <Typography sx={{ fontSize: "15px" }}>
-                                {number}
+                                {row.quantity}
                               </Typography>
                               <RemoveIcon
                                 onClick={() => handleSubtractClick(row.id)}
@@ -175,7 +178,9 @@ function Cart() {
                           </Box>
                         </TableCell>
                         <TableCell>
-                          <Typography>{`$${result}`}</Typography>
+                          <Typography>{`$${
+                            row.unitPrice * row.quantity
+                          }`}</Typography>
                         </TableCell>
                         <TableCell>
                           <IconButton

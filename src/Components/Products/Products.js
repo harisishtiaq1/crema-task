@@ -214,9 +214,9 @@ function Products() {
                   <Paper
                     sx={{
                       cursor: "pointer",
-                      ml: 3,
-                      marginTop: "8px",
-                      marginBottom: "20px",
+                      margin: "14px",
+                      // marginTop: "8px",
+                      // marginBottom: "20px",
                       display: "flex",
                       justifyContent: "space-between",
                       borderRadius: "40px",
@@ -235,9 +235,8 @@ function Products() {
                           justifyContent: "center",
                           textAlign: "center",
                           maxWidth: "50%",
-                          height: "auto",
+                          height: "300px",
                           ml: 15,
-                          mb: 5,
                         }}
                       >
                         <img
@@ -270,9 +269,9 @@ function Products() {
                             variant="h3"
                             component="h3"
                             sx={{
-                              fontSize: "16px",
-                              margin: "0px 0px 4px",
-                              fontWeight: "500",
+                              fontSize: "14px",
+                              margin: "1px 2px 4px",
+                              lineHeight: "1.5rem",
                             }}
                           >
                             {item.desc}

@@ -78,7 +78,7 @@ function Navbar() {
                 color: "black",
                 textDecoration: "none",
                 fontFamily: " Poppins, sans-serif",
-                fontWeight: "bold",
+                fontWeight: "500",
               }}
             >
               Products
@@ -93,7 +93,7 @@ function Navbar() {
                 color: "black",
                 textDecoration: "none",
                 fontFamily: " Poppins, sans-serif",
-                fontWeight: "bold",
+                fontWeight: "500",
               }}
             >
               Product Details
@@ -108,7 +108,7 @@ function Navbar() {
                 color: "black",
                 textDecoration: "none",
                 fontFamily: " Poppins, sans-serif",
-                fontWeight: "bold",
+                fontWeight: "500",
               }}
             >
               Orders
@@ -123,7 +123,7 @@ function Navbar() {
                 color: "black",
                 textDecoration: "none",
                 fontFamily: " Poppins, sans-serif",
-                fontWeight: "bold",
+                fontWeight: "500",
               }}
             >
               Cart
@@ -138,7 +138,7 @@ function Navbar() {
                 color: "black",
                 textDecoration: "none",
                 fontFamily: " Poppins, sans-serif",
-                fontWeight: "bold",
+                fontWeight: "500",
               }}
             >
               CheckOut

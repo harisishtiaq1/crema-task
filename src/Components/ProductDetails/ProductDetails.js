@@ -13,6 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
+import { toast } from "react-hot-toast";
 import Laptop from "../../Assets/item-2.png";
 import Camera from "../../Assets/item-4.png";
 import HeadPhones from "../../Assets/item-3.png";
@@ -35,6 +36,17 @@ function ProductDetails() {
     let path = "/cart";
     nevigate(path);
   };
+  const handleClick = () => {
+    return toast.success(
+      "HP Pavilion Gaming Ryzen 7 Octa Core 4800H added to cart successfully",
+      {
+        position: "bottom-right",
+        autoClose: 3000,
+        toastClassName: "my-toast",
+        bodyClassName: "my-toast-body",
+      }
+    );
+  };
   return (
     <Paper
       sx={{
@@ -52,7 +64,7 @@ function ProductDetails() {
         }}
       >
         <Stack direction="column">
-          <Typography sx={{ fontWeight: "bold", ml: 3 }}>
+          <Typography sx={{ fontWeight: "500", ml: 3 }}>
             HP Pavilion Gaming Ryzen 7 Octa Core 4800H
           </Typography>
           <Stack direction="row" sx={{ ml: 3 }}>
@@ -145,6 +157,7 @@ function ProductDetails() {
           </Stack>
           <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
             <Button
+              onClick={handleClick}
               sx={{
                 ml: 3,
                 color: "rgb(255, 255, 255)",
@@ -191,13 +204,13 @@ function ProductDetails() {
         </Box>
         <Box sx={{ mt: 2 }}>
           <Stack direction="column" sx={{ ml: 5 }}>
-            <Typography sx={{ fontWeight: "bold", fontSize: "16px" }}>
+            <Typography sx={{ fontWeight: "500", fontSize: "16px" }}>
               $1000
             </Typography>
             <Typography
               sx={{
                 color: "rgb(10, 143, 220)",
-                fontWeight: "bold",
+                fontWeight: "500",
                 fontSize: "14px",
               }}
             >
@@ -218,7 +231,7 @@ function ProductDetails() {
               and web page editors now use..
             </Typography>
             <Divider sx={{ mt: 2 }} />
-            <Typography fontWeight="bold" sx={{ mt: 1 }}>
+            <Typography fontWeight="500" sx={{ mt: 1 }}>
               Available Offers
             </Typography>
             <Stack direction="row">
@@ -239,7 +252,7 @@ function ProductDetails() {
             </Stack>
             <Stack direction="row" spacing={20}>
               <Box>
-                <Typography fontWeight="bold" sx={{ mt: 1 }}>
+                <Typography sx={{ mt: 1,fontWeight: "500", }}>
                   Deliver to
                 </Typography>
                 <TextField
@@ -260,7 +273,7 @@ function ProductDetails() {
                 </Typography>
               </Box>
               <Box>
-                <Typography fontWeight="bold" sx={{ mt: 1 }}>
+                <Typography  sx={{ mt: 1,fontWeight: "500", }}>
                   Services
                 </Typography>
                 <Stack direction="row">
@@ -312,7 +325,7 @@ function ProductDetails() {
               </Box>
             </Stack>
             <Divider variant="middle" sx={{ mt: 2 }} />
-            <Typography sx={{ fontWeight: "bold", fontSize: "15px", mt: 2 }}>
+            <Typography sx={{ fontWeight: "500",fontSize: "15px", mt: 2 }}>
               Specification
             </Typography>
             <Stack direction="row" sx={{ mt: 2 }} spacing={29}>
@@ -332,7 +345,7 @@ function ProductDetails() {
               <Typography>No</Typography>
             </Stack>
             <Divider variant="middle" sx={{ mt: 2 }} />
-            <Typography sx={{ fontWeight: "bold", fontSize: "15px", mt: 2 }}>
+            <Typography sx={{ fontWeight: "500", fontSize: "15px", mt: 2 }}>
               Product Details
             </Typography>
             <Stack direction="row" sx={{ mt: 2 }} spacing={23}>
@@ -352,7 +365,7 @@ function ProductDetails() {
               <Typography>BLUETOOTH</Typography>
             </Stack>
             <Divider variant="middle" sx={{ mt: 2 }} />
-            <Typography sx={{ fontWeight: "bold", fontSize: "15px", mt: 2 }}>
+            <Typography sx={{ fontWeight: "500", fontSize: "15px", mt: 2 }}>
               Reviews
             </Typography>
             <Stack direction="row">

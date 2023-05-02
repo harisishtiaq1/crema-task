@@ -294,7 +294,7 @@ function Orders() {
       <Box sx={{ mt: 8, ml: 3 }}>
         <Stack sx={{ mt: 4 }}>
           <Box position="static" sx={{ mt: 4 }}>
-            <Typography sx={{ fontWeight: "bold", fontSize: "17px" }}>
+            <Typography sx={{ fontWeight: "500", fontSize: "17px" }}>
               Recent Orders
             </Typography>
           </Box>
@@ -374,18 +374,18 @@ function Orders() {
             <Table aria-label="simple table">
               <TableHead sx={{ height: "20px" }}>
                 <TableRow style={{ backgroundColor: "#F4F7FE" }}>
-                  <TableCell sx={{ fontWeight: "bold" }}>Order ID</TableCell>
-                  <TableCell sx={{ fontWeight: "bold" }}>Product</TableCell>
-                  <TableCell sx={{ fontWeight: "bold" }}>Customer</TableCell>
-                  <TableCell sx={{ fontWeight: "bold" }}>
+                  <TableCell sx={{ fontWeight: "500" }}>Order ID</TableCell>
+                  <TableCell sx={{ fontWeight: "500" }}>Product</TableCell>
+                  <TableCell sx={{ fontWeight: "500" }}>Customer</TableCell>
+                  <TableCell sx={{ fontWeight: "500" }}>
                     Delivery Date
                   </TableCell>
-                  <TableCell sx={{ fontWeight: "bold" }}>Price</TableCell>
-                  <TableCell sx={{ fontWeight: "bold" }}>
+                  <TableCell sx={{ fontWeight: "500" }}>Price</TableCell>
+                  <TableCell sx={{ fontWeight: "500" }}>
                     Payment Method
                   </TableCell>
-                  <TableCell sx={{ fontWeight: "bold" }}>Status</TableCell>
-                  <TableCell sx={{ fontWeight: "bold" }}>Actions</TableCell>
+                  <TableCell sx={{ fontWeight: "500" }}>Status</TableCell>
+                  <TableCell sx={{ fontWeight: "500" }}>Actions</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -416,12 +416,14 @@ function Orders() {
                       <TableCell align="left">
                         <Box
                           sx={{
+                            textAlign: "center",
                             color: row.color,
                             fontSize: "16px",
                             backgroundColor: row.bgColor,
                             padding: "5px 5px",
                             display: "inline-block",
                             width: "100px",
+                            fontWeight: "500",
                           }}
                         >
                           {row.status}

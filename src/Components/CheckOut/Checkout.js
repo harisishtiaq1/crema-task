@@ -13,7 +13,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import OrderSummary from "./OrderSummary";
 
 function Checkout() {
-  const [deliveryAddress, setDeliveryAddress] = useState(null);
+  const [deliveryAddress, setDeliveryAddress] = useState("option2");
   const handleDeliveryChange = (event) => {
     setDeliveryAddress(event.target.value);
   };
@@ -21,7 +21,7 @@ function Checkout() {
     <Box sx={{ mt: 8, ml: 3 }}>
       <Stack sx={{ mt: 4 }}>
         <Box position="static" sx={{ mt: 4 }}>
-          <Typography sx={{ fontWeight: "bold", fontSize: "17px" }}>
+          <Typography sx={{ fontWeight: "500", fontSize: "17px" }}>
             CheckOut
           </Typography>
         </Box>
@@ -33,7 +33,7 @@ function Checkout() {
               <Typography
                 variant="h6"
                 component="h6"
-                sx={{ mt: 2, ml: 2, fontWeight: "bold" }}
+                sx={{ mt: 2, ml: 2, fontWeight: "500" }}
               >
                 Delivery Address
               </Typography>
@@ -59,7 +59,7 @@ function Checkout() {
                     />
                   </Stack>
                   <Stack direction="column">
-                    <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
+                    <Typography sx={{ mt: 1, ml: 1, fontWeight: "500" }}>
                       Crema User&nbsp;&nbsp; &nbsp; +1 508-966-0591
                     </Typography>
                     <Typography sx={{ mt: 1, ml: 1 }}>
@@ -110,7 +110,7 @@ function Checkout() {
                     />
                   </Stack>
                   <Stack direction="column">
-                    <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
+                    <Typography sx={{ mt: 1, ml: 1, fontWeight: "500" }}>
                       Crema User&nbsp;&nbsp; &nbsp; +1 508-966-0592
                     </Typography>
                     <Typography sx={{ mt: 1, ml: 1 }}>
@@ -161,7 +161,7 @@ function Checkout() {
                     />
                   </Stack>
                   <Stack direction="column">
-                    <Typography sx={{ mt: 1, ml: 1, fontWeight: "bold" }}>
+                    <Typography sx={{ mt: 1, ml: 1, fontWeight: "500" }}>
                       Crema User &nbsp;&nbsp; &nbsp;+1 508-966-0593
                     </Typography>
                     <Typography sx={{ mt: 1, ml: 1 }}>
