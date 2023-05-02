@@ -25,7 +25,7 @@ function Checkout() {
             CheckOut
           </Typography>
         </Box>
-        <Grid container sx={{mt:2}}>
+        <Grid container sx={{ mt: 2 }}>
           <Grid item xs={12} sm={9} md={8}>
             <Paper
               sx={{ width: "900px", borderRadius: "14px", padding: "15px" }}

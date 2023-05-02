@@ -31,7 +31,7 @@ function App() {
             toastOptions={{
               className: "",
               style: {
-                fontWeight: "bold",
+                fontWeight: "500",
                 padding: "6px",
                 fontSize: "15px",
                 backgroundColor: "green",

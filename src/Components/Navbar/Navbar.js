@@ -79,6 +79,9 @@ function Navbar() {
                 textDecoration: "none",
                 fontFamily: " Poppins, sans-serif",
                 fontWeight: "500",
+                "&:active": {
+                  color: "red",
+                },
               }}
             >
               Products

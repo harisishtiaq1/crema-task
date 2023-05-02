@@ -40,6 +40,7 @@ function ProductDetails() {
     return toast.success(
       "HP Pavilion Gaming Ryzen 7 Octa Core 4800H added to cart successfully",
       {
+        style: { width: "700px" },
         position: "bottom-right",
         autoClose: 3000,
         toastClassName: "my-toast",
@@ -155,7 +156,7 @@ function ProductDetails() {
               src={images[slideIndex]}
             />
           </Stack>
-          <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
+          <Stack direction="row" spacing={3} sx={{ mt: 3, ml: 5 }}>
             <Button
               onClick={handleClick}
               sx={{
@@ -252,7 +253,7 @@ function ProductDetails() {
             </Stack>
             <Stack direction="row" spacing={20}>
               <Box>
-                <Typography sx={{ mt: 1, fontWeight: "500" }}>
+                <Typography sx={{ mt: 1, mb: 2, fontWeight: "500" }}>
                   Deliver to
                 </Typography>
                 <TextField
