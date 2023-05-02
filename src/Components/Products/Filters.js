@@ -322,7 +322,7 @@ function Filters() {
                     <FormControlLabel control={<Checkbox />} />
                     <Typography sx={{ mt: 1 }}>
                       5
-                      <IconButton>
+                      <IconButton sx={{ margin: 0, padding: 0 }}>
                         <StarIcon fontSize="small" />
                       </IconButton>
                       & above
@@ -332,7 +332,7 @@ function Filters() {
                     <FormControlLabel control={<Checkbox />} />
                     <Typography sx={{ mt: 1 }}>
                       4
-                      <IconButton>
+                      <IconButton sx={{ margin: 0, padding: 0 }}>
                         <StarIcon fontSize="small" />
                       </IconButton>
                       & above
@@ -343,7 +343,7 @@ function Filters() {
                     <FormControlLabel control={<Checkbox />} />
                     <Typography sx={{ mt: 1 }}>
                       3
-                      <IconButton>
+                      <IconButton sx={{ margin: 0, padding: 0 }}>
                         <StarIcon fontSize="small" />
                       </IconButton>
                       & above
@@ -354,7 +354,7 @@ function Filters() {
                     <FormControlLabel control={<Checkbox />} />
                     <Typography sx={{ mt: 1 }}>
                       2
-                      <IconButton>
+                      <IconButton sx={{ margin: 0, padding: 0 }}>
                         <StarIcon fontSize="small" />
                       </IconButton>
                       & above
@@ -365,7 +365,7 @@ function Filters() {
                     <FormControlLabel control={<Checkbox />} />
                     <Typography sx={{ mt: 1 }}>
                       1
-                      <IconButton>
+                      <IconButton sx={{ margin: 0, padding: 0 }}>
                         <StarIcon fontSize="small" />
                       </IconButton>
                       & above
