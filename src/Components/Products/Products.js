@@ -213,7 +213,7 @@ function Products() {
                 <Grid item xs={6} key={item}>
                   <Paper
                     sx={{
-                      cursor:"pointer",
+                      cursor: "pointer",
                       ml: 3,
                       marginTop: "8px",
                       marginBottom: "20px",
@@ -224,8 +224,8 @@ function Products() {
                       padding: "15px",
                       boxShadow:
                         "3px 3px 5px rgb(0 0 0 / 25%), -3px -3Fpx 5px rgb(255 255 255 / 6%)",
-                      }}
-                      onClick={() => details()}
+                    }}
+                    onClick={() => details()}
                   >
                     <Stack direction="column">
                       <Box
@@ -246,18 +246,38 @@ function Products() {
                           alt="green iguana"
                         />
                       </Box>
-                      <Box sx={{textAlign:'center',display:'flex',alignItems:'center',justifyContent:'center'}}>
-                        <Typography
-                          variant="h3"
-                          component="h3"
-                          sx={{
-                            fontSize: "16px",
-                            margin: "0px 0px 4px",
-                            fontWeight: "500",
-                          }}
-                        >
-                          {item.text}
-                        </Typography>
+                      <Box
+                        sx={{
+                          textAlign: "center",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Stack direction="column">
+                          <Typography
+                            variant="h3"
+                            component="h3"
+                            sx={{
+                              fontSize: "16px",
+                              margin: "0px 0px 4px",
+                              fontWeight: "500",
+                            }}
+                          >
+                            {item.text}
+                          </Typography>
+                          <Typography
+                            variant="h3"
+                            component="h3"
+                            sx={{
+                              fontSize: "16px",
+                              margin: "0px 0px 4px",
+                              fontWeight: "500",
+                            }}
+                          >
+                            {item.desc}
+                          </Typography>
+                        </Stack>
                       </Box>
                     </Stack>
                   </Paper>

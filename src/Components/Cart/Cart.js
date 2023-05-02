@@ -33,7 +33,7 @@ function Cart() {
     console.log("row index");
     console.log("row index");
     console.log("row index");
-    row[index].unitPrice = row.unitPrice * number;
+    rows[index].unitPrice = rows.unitPrice * number;
     console.log(row, index);
     const newNumber = number + 1;
     setNumber(newNumber);
@@ -122,7 +122,7 @@ function Cart() {
                   </TableHead>
                   <TableBody sx={{ height: "30px" }}>
                     {rows.map((row, index) => (
-                      <TableRow key={row.name}>
+                      <TableRow key={index}>
                         <TableCell>
                           <Stack direction="row">
                             <Box

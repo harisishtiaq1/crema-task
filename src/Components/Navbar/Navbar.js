@@ -37,7 +37,7 @@ function Navbar() {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.name} disablePadding>
+          <ListItem key={item} disablePadding>
             <ListItemButton>
               <ListItemText
                 primary={item.name}
