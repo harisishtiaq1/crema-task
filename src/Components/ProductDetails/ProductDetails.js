@@ -252,7 +252,7 @@ function ProductDetails() {
             </Stack>
             <Stack direction="row" spacing={20}>
               <Box>
-                <Typography sx={{ mt: 1,fontWeight: "500", }}>
+                <Typography sx={{ mt: 1, fontWeight: "500" }}>
                   Deliver to
                 </Typography>
                 <TextField
@@ -273,7 +273,7 @@ function ProductDetails() {
                 </Typography>
               </Box>
               <Box>
-                <Typography  sx={{ mt: 1,fontWeight: "500", }}>
+                <Typography sx={{ mt: 1, fontWeight: "500" }}>
                   Services
                 </Typography>
                 <Stack direction="row">
@@ -325,7 +325,7 @@ function ProductDetails() {
               </Box>
             </Stack>
             <Divider variant="middle" sx={{ mt: 2 }} />
-            <Typography sx={{ fontWeight: "500",fontSize: "15px", mt: 2 }}>
+            <Typography sx={{ fontWeight: "500", fontSize: "15px", mt: 2 }}>
               Specification
             </Typography>
             <Stack direction="row" sx={{ mt: 2 }} spacing={29}>

@@ -31,12 +31,11 @@ function App() {
             toastOptions={{
               className: "",
               style: {
-                
                 fontWeight: "bold",
                 padding: "6px",
                 fontSize: "15px",
-                backgroundColor:"green",
-                color:'white'
+                backgroundColor: "green",
+                color: "white",
               },
             }}
           />
