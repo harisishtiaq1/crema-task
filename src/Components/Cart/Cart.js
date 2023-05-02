@@ -28,7 +28,13 @@ function Cart() {
   const [number, setNumber] = useState(1);
   const [result, setResult] = useState(95);
 
-  function handleAddClick() {
+  function handleAddClick(row, index) {
+    console.log("row index");
+    console.log("row index");
+    console.log("row index");
+    console.log("row index");
+    row[index].unitPrice = row.unitPrice *number ;
+    console.log(row, index);
     const newNumber = number + 1;
     setNumber(newNumber);
     setResult(95 * newNumber);
@@ -154,7 +160,7 @@ function Cart() {
                               sx={{ mt: 1, ml: 1 }}
                             >
                               <AddIcon
-                                onClick={() => handleAddClick(row.id)}
+                                onClick={() => handleAddClick(row, index)}
                                 fontSize="small"
                               />
 
